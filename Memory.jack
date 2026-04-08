@@ -1,0 +1,66 @@
+class Memory{
+    static int freeList;
+    function void init(){
+        let freeList = 2048;
+        //Size
+        let freeList[0] = 14336;
+        //Next, 0 means no next
+        let freeList[1] = 0;
+
+        return;
+    }
+
+    function int alloc(int n){
+        var int blockPointer, returnPointer;
+        let blockPointer = freeList;
+        //While n is less then the size of the current block
+        //And the next block exists
+        while((n + 3 > blockPointer[0]) & (~(blockPointer[1] = 0))){
+            let blockPointer = blockPointer[1];
+        }
+        //Went through each block and could not find a block big enough
+        if((n + 3) > blockPointer[0]){
+            return false;
+        }
+        // Set size of block
+        // Size - n - 1 is where the size of block is stored
+        let blockPointer[blockPointer[0] - (n + 1)] = n + 1;
+        let returnPointer = blockPointer + (blockPointer[0] - n);
+        // Update freeList entry size
+        let blockPointer[0] = blockPointer[0] - (n + 1); 
+        
+        return returnPointer;
+    }
+
+    function void deAlloc(int object){
+        var int tail;
+        let tail = freeList;
+        //find tail
+        while(~(tail[1] = 0)){
+            let tail = tail[1];
+        }
+        // Append object to tail
+        // Size of list is one element behind objects, aka start of list
+        let tail[1] = object - 1;
+        // Set append list next to 0
+        let object[0] = 0;
+        
+        return;
+    }
+
+    function int peek(int address){
+        var int baseAddress;
+        let baseAddress = 0;
+
+        return baseAddress[address];
+    }
+
+    function void poke(int address, int value){
+        var int baseAddress;
+        let baseAddress = 0;
+
+        let baseAddress[address] = value;
+
+        return;
+    }
+}

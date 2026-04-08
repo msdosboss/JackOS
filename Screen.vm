@@ -1,0 +1,168 @@
+function Screen.clearScreen 1
+push constant 16384
+pop local 0
+label WhileStartL34
+push local 0
+push constant 24576
+lt
+not
+if-goto WhileEndL34
+push local 0
+push constant 0
+add
+push constant 0
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WhileStartL34
+label WhileEndL34
+push constant 0
+return
+function Screen.setColor 0
+push argument 0
+pop static 0
+push constant 0
+return
+function Screen.cordToMemLoc 0
+push constant 16384
+push argument 0
+push constant 8
+call Math.divide 2
+push constant 32
+push argument 1
+call Math.multiply 2
+add
+add
+return
+function Screen.drawPixel 3
+push argument 0
+push constant 511
+gt
+push argument 1
+push constant 255
+gt
+or
+not
+if-goto FalseL35
+push constant 0
+return
+goto TrueL35
+label FalseL35
+label TrueL35
+push pointer 0
+push argument 0
+push argument 1
+call Screen.cordToMemLoc 3
+pop local 0
+push argument 0
+push constant 8
+call Math.mod 2
+pop local 2
+push constant 1
+push local 2
+call Math.bitshiftLeft 2
+pop local 1
+push static 0
+push constant 1
+neg
+eq
+not
+if-goto FalseL36
+push local 0
+push constant 0
+add
+push local 0
+push constant 0
+add
+pop pointer 1
+push that 0
+push local 1
+or
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+goto TrueL36
+label FalseL36
+push local 1
+not
+pop local 1
+push local 0
+push constant 0
+add
+push local 0
+push constant 0
+add
+pop pointer 1
+push that 0
+push local 1
+and
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+label TrueL36
+push constant 0
+return
+function Screen.drawLine 4
+push argument 2
+push argument 0
+sub
+pop local 0
+push argument 3
+push argument 1
+sub
+pop local 1
+push constant 0
+pop local 2
+push constant 0
+pop local 3
+label WhileStartL37
+push local 2
+push local 0
+lt
+push local 3
+push local 1
+lt
+and
+not
+if-goto WhileEndL37
+push pointer 0
+push argument 0
+push local 2
+add
+push argument 1
+push local 3
+add
+call Screen.drawPixel 3
+pop temp 0
+push local 3
+push local 2
+call Math.divide 2
+push local 1
+push local 0
+call Math.divide 2
+gt
+not
+if-goto FalseL38
+push local 2
+push constant 1
+add
+pop local 2
+goto TrueL38
+label FalseL38
+push local 3
+push constant 1
+add
+pop local 3
+label TrueL38
+goto WhileStartL37
+label WhileEndL37
+push constant 0
+return
+

@@ -1,0 +1,29 @@
+class Stack{
+    field int stackBase, stackPointer, len;
+    constructor Stack new(int size){
+        let stackBase = Memory.alloc(size); 
+        let stackPointer = stackBase;
+        // Technically size + 1 exists at *(stackBase - 1)
+        // But I think this is more readable
+        let len = size;
+        return this;
+    }
+
+    method void push(int val){
+        if(~((stackPointer - stackBase) < len)){
+            return;
+        }
+        let stackPointer[0] = val;
+        let stackPointer = stackPointer + 1;
+        return;
+    }
+
+    method int pop(){
+        // Empty stack
+        if(stackPointer = stackBase){
+            return 0;
+        }
+        let stackPointer = stackPointer - 1;
+        return stackPointer[0];
+    }
+}

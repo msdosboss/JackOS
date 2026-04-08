@@ -1,0 +1,65 @@
+class Screen{
+    static bool color;
+
+    function void clearScreen(){
+        var int currentWordPointer;
+        // This is the starting address for the screen
+        let currentWordPointer = 16384;
+        // 24575 is the last pixel 
+        while(currentWordPointer < 24576){
+            let currentWordPointer[0] = 0;
+            let currentWordPointer = currentWordPointer + 1;
+        }
+        return;
+    }
+
+    function void setColor(bool b){
+        let color = b;
+        return;
+    }
+
+    function int cordToMemLoc(int x, int y){
+        return 16384 + ((x / 8) + (32 * y));
+    }
+
+    function void drawPixel(int x, int y){
+        var int pixelWordPointer, bitVal, n;
+        if((x > 511) | (y > 255)){
+            return;
+        }
+
+        let pixelWordPointer = cordToMemLoc(x, y);
+        let n = Math.mod(x, 8);
+        let bitVal = Math.bitshiftLeft(1, n);
+        if(color = true){
+            let pixelWordPointer[0] = pixelWordPointer[0] | bitVal;
+        }
+        else{
+            let bitVal = ~bitVal;
+            let pixelWordPointer[0] = pixelWordPointer[0] & bitVal;
+        }
+        return;
+    }
+
+    function void drawLine(int x1, int y1, int x2, int y2){
+        var int dx, dy, a, b;
+        let dx = x2 - x1;
+        let dy = y2 - y1;
+        let a = 0;
+        let b = 0;
+
+        while((a < dx) & (b < dy)){
+            do drawPixel(x1 + a, y1 + b);
+            if((b / a) > (dy / dx)){
+                // Move Right
+                let a = a + 1;
+            }
+            else{
+                // Move Up
+                let b = b + 1;
+            }
+        }
+
+        return;
+    }
+}
