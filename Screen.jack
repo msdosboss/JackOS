@@ -19,17 +19,17 @@ class Screen{
     }
 
     function int cordToMemLoc(int x, int y){
-        return 16384 + ((x / 8) + (32 * y));
+        return 16384 + ((x / 16) + (32 * y));
     }
 
     function void drawPixel(int x, int y){
         var int pixelWordPointer, bitVal, n;
-        if((x > 511) | (y > 255)){
+        if((y > 255) | (x > 511)){
             return;
         }
 
-        let pixelWordPointer = cordToMemLoc(x, y);
-        let n = Math.mod(x, 8);
+        let pixelWordPointer = Screen.cordToMemLoc(x, y);
+        let n = Math.mod(x, 16);
         let bitVal = Math.bitshiftLeft(1, n);
         if(color = true){
             let pixelWordPointer[0] = pixelWordPointer[0] | bitVal;
@@ -41,7 +41,7 @@ class Screen{
         return;
     }
 
-    function void drawLine(int x1, int y1, int x2, int y2){
+/*    function void drawLine(int x1, int y1, int x2, int y2){
         var int dx, dy, a, b;
         let dx = x2 - x1;
         let dy = y2 - y1;
@@ -49,7 +49,7 @@ class Screen{
         let b = 0;
 
         while((a < dx) & (b < dy)){
-            do drawPixel(x1 + a, y1 + b);
+            do Screen.drawPixel(x1 + a, y1 + b);
             if((b / a) > (dy / dx)){
                 // Move Right
                 let a = a + 1;
@@ -58,6 +58,23 @@ class Screen{
                 // Move Up
                 let b = b + 1;
             }
+        }
+
+        return;
+    }
+*/
+
+    function void drawLine(int x1, int x2, int y1){
+        if(x1 < 0){
+            return;
+        }
+        if(x2 > 511){
+            return;
+        }
+
+        while(x1 < x2){
+            do Screen.drawPixel(x1, y1);
+            let x1 = x1 + 1;
         }
 
         return;

@@ -31,7 +31,7 @@ return
 function Screen.cordToMemLoc 0
 push constant 16384
 push argument 0
-push constant 8
+push constant 16
 call Math.divide 2
 push constant 32
 push argument 1
@@ -40,11 +40,11 @@ add
 add
 return
 function Screen.drawPixel 3
-push argument 0
-push constant 511
-gt
 push argument 1
 push constant 255
+gt
+push argument 0
+push constant 511
 gt
 or
 not
@@ -54,13 +54,12 @@ return
 goto TrueL35
 label FalseL35
 label TrueL35
-push pointer 0
 push argument 0
 push argument 1
-call Screen.cordToMemLoc 3
+call Screen.cordToMemLoc 2
 pop local 0
 push argument 0
-push constant 8
+push constant 16
 call Math.mod 2
 pop local 2
 push constant 1
@@ -109,60 +108,43 @@ pop that 0
 label TrueL36
 push constant 0
 return
-function Screen.drawLine 4
-push argument 2
+function Screen.drawLine 0
 push argument 0
-sub
-pop local 0
-push argument 3
-push argument 1
-sub
-pop local 1
 push constant 0
-pop local 2
-push constant 0
-pop local 3
-label WhileStartL37
-push local 2
-push local 0
 lt
-push local 3
-push local 1
-lt
-and
 not
-if-goto WhileEndL37
-push pointer 0
-push argument 0
-push local 2
-add
+if-goto FalseL37
+push constant 0
+return
+goto TrueL37
+label FalseL37
+label TrueL37
 push argument 1
-push local 3
-add
-call Screen.drawPixel 3
-pop temp 0
-push local 3
-push local 2
-call Math.divide 2
-push local 1
-push local 0
-call Math.divide 2
+push constant 511
 gt
 not
 if-goto FalseL38
-push local 2
-push constant 1
-add
-pop local 2
+push constant 0
+return
 goto TrueL38
 label FalseL38
-push local 3
+label TrueL38
+label WhileStartL39
+push argument 0
+push argument 1
+lt
+not
+if-goto WhileEndL39
+push argument 0
+push argument 2
+call Screen.drawPixel 2
+pop temp 0
+push argument 0
 push constant 1
 add
-pop local 3
-label TrueL38
-goto WhileStartL37
-label WhileEndL37
+pop argument 0
+goto WhileStartL39
+label WhileEndL39
 push constant 0
 return
 

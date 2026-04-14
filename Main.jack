@@ -1,14 +1,8 @@
 class Main{
     function void main(){
-        var String str;
-        let str = String.new(5);
-        do str.appendChar("O");
-        do str.appendChar("c");
-        do str.appendChar("r");
-        do str.appendChar("a");
-        //do Screen.setColor(true);
-        do Output.printString(str);
-        //do Screen.drawLine(0, 0, 255, 255);
+        do Screen.setColor(true);
+        do Screen.drawLine(0, 511, 100);
+        //do Output.printInt(111);
         return;
     }
 }
