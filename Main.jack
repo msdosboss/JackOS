@@ -1,7 +1,7 @@
 class Main{
     function void main(){
         do Screen.setColor(true);
-        do Screen.drawLine(0, 511, 100);
+        do Screen.drawLine(50, 50, 100, 100);
         //do Output.printInt(111);
         return;
     }

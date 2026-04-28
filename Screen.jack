@@ -1,5 +1,5 @@
 class Screen{
-    static bool color;
+    static boolean color;
 
     function void clearScreen(){
         var int currentWordPointer;
@@ -13,7 +13,7 @@ class Screen{
         return;
     }
 
-    function void setColor(bool b){
+    function void setColor(boolean b){
         let color = b;
         return;
     }
@@ -31,7 +31,7 @@ class Screen{
         let pixelWordPointer = Screen.cordToMemLoc(x, y);
         let n = Math.mod(x, 16);
         let bitVal = Math.bitshiftLeft(1, n);
-        if(color = true){
+        if(color){
             let pixelWordPointer[0] = pixelWordPointer[0] | bitVal;
         }
         else{
@@ -40,41 +40,26 @@ class Screen{
         }
         return;
     }
-
-/*    function void drawLine(int x1, int y1, int x2, int y2){
-        var int dx, dy, a, b;
+    function void drawLine(int x1, int y1, int x2, int y2){
+        var int dx, dy, a, b, diff;
         let dx = x2 - x1;
         let dy = y2 - y1;
         let a = 0;
         let b = 0;
+        let diff = 0;
 
         while((a < dx) & (b < dy)){
             do Screen.drawPixel(x1 + a, y1 + b);
-            if((b / a) > (dy / dx)){
+            if(diff < 0){
                 // Move Right
                 let a = a + 1;
+                let diff = diff + dy;
             }
             else{
                 // Move Up
                 let b = b + 1;
+                let diff = diff - dx
             }
-        }
-
-        return;
-    }
-*/
-
-    function void drawLine(int x1, int x2, int y1){
-        if(x1 < 0){
-            return;
-        }
-        if(x2 > 511){
-            return;
-        }
-
-        while(x1 < x2){
-            do Screen.drawPixel(x1, y1);
-            let x1 = x1 + 1;
         }
 
         return;

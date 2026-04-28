@@ -67,9 +67,6 @@ push local 2
 call Math.bitshiftLeft 2
 pop local 1
 push static 0
-push constant 1
-neg
-eq
 not
 if-goto FalseL36
 push local 0
@@ -108,43 +105,65 @@ pop that 0
 label TrueL36
 push constant 0
 return
-function Screen.drawLine 0
-push argument 0
-push constant 0
-lt
-not
-if-goto FalseL37
-push constant 0
-return
-goto TrueL37
-label FalseL37
-label TrueL37
-push argument 1
-push constant 511
-gt
-not
-if-goto FalseL38
-push constant 0
-return
-goto TrueL38
-label FalseL38
-label TrueL38
-label WhileStartL39
-push argument 0
-push argument 1
-lt
-not
-if-goto WhileEndL39
-push argument 0
+function Screen.drawLine 5
 push argument 2
+push argument 0
+sub
+pop local 0
+push argument 3
+push argument 1
+sub
+pop local 1
+push constant 0
+pop local 2
+push constant 0
+pop local 3
+push constant 0
+pop local 4
+label WhileStartL37
+push local 2
+push local 0
+lt
+push local 3
+push local 1
+lt
+and
+not
+if-goto WhileEndL37
+push argument 0
+push local 2
+add
+push argument 1
+push local 3
+add
 call Screen.drawPixel 2
 pop temp 0
-push argument 0
+push local 4
+push constant 0
+lt
+not
+if-goto FalseL38
+push local 2
 push constant 1
 add
-pop argument 0
-goto WhileStartL39
-label WhileEndL39
+pop local 2
+push local 4
+push local 1
+add
+pop local 4
+goto TrueL38
+label FalseL38
+push local 3
+push constant 1
+add
+pop local 3
+push local 4
+push local 0
+sub
+pop local 4
+label TrueL38
+goto WhileStartL37
+label WhileEndL37
 push constant 0
 return
 
