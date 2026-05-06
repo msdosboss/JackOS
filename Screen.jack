@@ -41,14 +41,31 @@ class Screen{
         return;
     }
     function void drawLine(int x1, int y1, int x2, int y2){
-        var int dx, dy, a, b, diff;
+        var int dx, dy, a, b, diff, temp;
         let dx = x2 - x1;
         let dy = y2 - y1;
         let a = 0;
         let b = 0;
         let diff = 0;
+        if(dy = 0){
+            while(~(a > dx)){
+                do Screen.drawPixel(x1 + a, y1);
+                let a = a + 1;
+            }
+            return;
+        }
 
-        while((a < dx) & (b < dy)){
+        if(dx = 0){
+            while(~(b > dy)){
+                do Screen.drawPixel(x1, y1 + b);
+                let b = b + 1;
+            }
+            return;
+        }
+
+
+
+        while((~(a > dx)) & (~(b > dy))){
             do Screen.drawPixel(x1 + a, y1 + b);
             if(diff < 0){
                 // Move Right
@@ -58,10 +75,43 @@ class Screen{
             else{
                 // Move Up
                 let b = b + 1;
-                let diff = diff - dx
+                let diff = diff - dx;
             }
         }
 
+        return;
+    }
+
+    function void drawRectangle(int x1, int y1, int x2, int y2){
+        do Screen.drawLine(x1, y1, x2, y1);
+        do Screen.drawLine(x1, y2, x2, y2);
+        do Screen.drawLine(x1, y1, x1, y2);
+        do Screen.drawLine(x2, y1, x2, y2);
+        return;
+    }
+
+    function void drawCircle(int x, int y, int r){
+        var int dy, endy, halfWidth, x1, y1, x2;
+        
+        let dy = -r;
+        let endy = r; 
+        
+        // Use ~(dy > endy) to include the final row (dy = r)
+        while(~(dy > endy)){
+            
+            // Calculate the math heavily only ONCE per row
+            let halfWidth = Math.sqrt((r * r) - (dy * dy));
+            
+            // x1 is left, x2 is right (ensures dx is positive for drawLine)
+            let x1 = x - halfWidth;
+            let x2 = x + halfWidth;
+            let y1 = y + dy;
+            
+            do Screen.drawLine(x1, y1, x2, y1);
+            
+            let dy = dy + 1;
+        }
+        
         return;
     }
 }

@@ -5,181 +5,8 @@ D=A
 M=D
 @Sys.init
 0;JMP
-//def Function Screen.clearScreen
-(Screen.clearScreen)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 16384
-@16384
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Screen.clearScreen$WhileStartL34)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 24576
-@24576
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE58
-D;JLT
-(FALSE58)
-@SP
-A=M
-M=0
-@END58
-0;JMP
-(TRUE58)
-@SP
-A=M
-M=-1
-(END58)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Screen.clearScreen$WhileEndL34
-@SP
-AM=M-1
-D=M
-@Screen.clearScreen$WhileEndL34
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop temp 0
-@5
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push temp 0
-@5
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop that 0
-@THAT
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
+//def Function Main.main
+(Main.main)
 //push constant 1
 @1
 D=A
@@ -188,2012 +15,14 @@ A=M
 M=D
 @SP
 M=M+1
-//add
+//neg
 @SP
 AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Screen.clearScreen$WhileStartL34
-@Screen.clearScreen$WhileStartL34
-0;JMP
-(Screen.clearScreen$WhileEndL34)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Screen.setColor
-(Screen.setColor)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop static 0
-@._Screen.0
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Screen.cordToMemLoc
-(Screen.cordToMemLoc)
-//push constant 16384
-@16384
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 16
-@16
-D=A
-@SP
-A=M
-M=D
+M=-M
 @SP
 M=M+1
 // Push return address to stack
-@Screen.cordToMemLoc$ret.0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Math.divide
-@Math.divide
-0;JMP
-(Screen.cordToMemLoc$ret.0)
-//push constant 32
-@32
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Screen.cordToMemLoc$ret.1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Math.multiply
-@Math.multiply
-0;JMP
-(Screen.cordToMemLoc$ret.1)
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Screen.drawPixel
-(Screen.drawPixel)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 255
-@255
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE641
-D;JGE
-(FALSE641)
-@SP
-A=M
-M=0
-@END641
-0;JMP
-(TRUE641)
-@SP
-A=M
-M=-1
-(END641)
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 511
-@511
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE682
-D;JGE
-(FALSE682)
-@SP
-A=M
-M=0
-@END682
-0;JMP
-(TRUE682)
-@SP
-A=M
-M=-1
-(END682)
-@SP
-M=M+1
-//or
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D|M
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Screen.drawPixel$FalseL35
-@SP
-AM=M-1
-D=M
-@Screen.drawPixel$FalseL35
-D;JNE
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Screen.drawPixel$TrueL35
-@Screen.drawPixel$TrueL35
-0;JMP
-(Screen.drawPixel$FalseL35)
-(Screen.drawPixel$TrueL35)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Screen.drawPixel$ret.0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Screen.cordToMemLoc
-@Screen.cordToMemLoc
-0;JMP
-(Screen.drawPixel$ret.0)
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 16
-@16
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Screen.drawPixel$ret.1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Math.mod
-@Math.mod
-0;JMP
-(Screen.drawPixel$ret.1)
-//pop local 2
-@LCL
-D=M
-@2
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 2
-@LCL
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Screen.drawPixel$ret.2
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Math.bitshiftLeft
-@Math.bitshiftLeft
-0;JMP
-(Screen.drawPixel$ret.2)
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push static 0
-@._Screen.0
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Screen.drawPixel$FalseL36
-@SP
-AM=M-1
-D=M
-@Screen.drawPixel$FalseL36
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push that 0
-@THAT
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//or
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D|M
-@SP
-M=M+1
-//pop temp 0
-@5
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push temp 0
-@5
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop that 0
-@THAT
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Screen.drawPixel$TrueL36
-@Screen.drawPixel$TrueL36
-0;JMP
-(Screen.drawPixel$FalseL36)
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push that 0
-@THAT
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//and
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D&M
-@SP
-M=M+1
-//pop temp 0
-@5
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push temp 0
-@5
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop that 0
-@THAT
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Screen.drawPixel$TrueL36)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Screen.drawLine
-(Screen.drawLine)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 2
-@ARG
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push argument 3
-@ARG
-D=M
-@3
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 2
-@LCL
-D=M
-@2
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 3
-@LCL
-D=M
-@3
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 4
-@LCL
-D=M
-@4
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Screen.drawLine$WhileStartL37)
-//push local 2
-@LCL
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE1674
-D;JLT
-(FALSE1674)
-@SP
-A=M
-M=0
-@END1674
-0;JMP
-(TRUE1674)
-@SP
-A=M
-M=-1
-(END1674)
-@SP
-M=M+1
-//push local 3
-@LCL
-D=M
-@3
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE1718
-D;JLT
-(FALSE1718)
-@SP
-A=M
-M=0
-@END1718
-0;JMP
-(TRUE1718)
-@SP
-A=M
-M=-1
-(END1718)
-@SP
-M=M+1
-//and
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D&M
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Screen.drawLine$WhileEndL37
-@SP
-AM=M-1
-D=M
-@Screen.drawLine$WhileEndL37
-D;JNE
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 2
-@LCL
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 3
-@LCL
-D=M
-@3
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-// Push return address to stack
-@Screen.drawLine$ret.0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Screen.drawPixel
-@Screen.drawPixel
-0;JMP
-(Screen.drawLine$ret.0)
-//pop temp 0
-@5
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 4
-@LCL
-D=M
-@4
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE1909
-D;JLT
-(FALSE1909)
-@SP
-A=M
-M=0
-@END1909
-0;JMP
-(TRUE1909)
-@SP
-A=M
-M=-1
-(END1909)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Screen.drawLine$FalseL38
-@SP
-AM=M-1
-D=M
-@Screen.drawLine$FalseL38
-D;JNE
-//push local 2
-@LCL
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 2
-@LCL
-D=M
-@2
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 4
-@LCL
-D=M
-@4
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 4
-@LCL
-D=M
-@4
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Screen.drawLine$TrueL38
-@Screen.drawLine$TrueL38
-0;JMP
-(Screen.drawLine$FalseL38)
-//push local 3
-@LCL
-D=M
-@3
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 3
-@LCL
-D=M
-@3
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 4
-@LCL
-D=M
-@4
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//pop local 4
-@LCL
-D=M
-@4
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Screen.drawLine$TrueL38)
-//Goto Screen.drawLine$WhileStartL37
-@Screen.drawLine$WhileStartL37
-0;JMP
-(Screen.drawLine$WhileEndL37)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Stack.new
-(Stack.new)
-//push constant 3
-@3
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Stack.new$ret.0
+@Main.main$ret.0
 D=A
 @SP
 A=M
@@ -2244,423 +73,10 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Memory.alloc
-@Memory.alloc
+// Goto Screen.setColor
+@Screen.setColor
 0;JMP
-(Stack.new$ret.0)
-//pop pointer 0
-@THIS
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Stack.new$ret.1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@6
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Memory.alloc
-@Memory.alloc
-0;JMP
-(Stack.new$ret.1)
-//pop this 0
-@THIS
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push this 0
-@THIS
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop this 1
-@THIS
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop this 2
-@THIS
-D=M
-@2
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push pointer 0
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Stack.push
-(Stack.push)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop pointer 0
-@THIS
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push this 0
-@THIS
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//push this 2
-@THIS
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE2517
-D;JLT
-(FALSE2517)
-@SP
-A=M
-M=0
-@END2517
-0;JMP
-(TRUE2517)
-@SP
-A=M
-M=-1
-(END2517)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Stack.push$FalseL1
-@SP
-AM=M-1
-D=M
-@Stack.push$FalseL1
-D;JNE
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Stack.push$TrueL1
-@Stack.push$TrueL1
-0;JMP
-(Stack.push$FalseL1)
-(Stack.push$TrueL1)
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
+(Main.main$ret.0)
 //pop temp 0
 @5
 D=A
@@ -2672,1040 +88,40 @@ D=M
 @R13
 A=M
 M=D
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push temp 0
-@5
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop that 0
-@THAT
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
+//push constant 50
+@50
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop this 1
-@THIS
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
+//push constant 50
+@50
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Stack.pop
-(Stack.pop)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop pointer 0
-@THIS
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push this 0
-@THIS
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//eq
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=D-M
-@TRUE2855
-D;JEQ
-(FALSE2855)
-@SP
-A=M
-M=0
-@END2855
-0;JMP
-(TRUE2855)
-@SP
-A=M
-M=-1
-(END2855)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Stack.pop$FalseL2
-@SP
-AM=M-1
-D=M
-@Stack.pop$FalseL2
-D;JNE
-//push constant 0
-@0
+//push constant 100
+@100
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
+//push constant 100
+@100
 D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Stack.pop$TrueL2
-@Stack.pop$TrueL2
-0;JMP
-(Stack.pop$FalseL2)
-(Stack.pop$TrueL2)
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//pop this 1
-@THIS
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push this 1
-@THIS
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop pointer 1
-@THAT
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push that 0
-@THAT
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.bitshiftLeft
-(Math.bitshiftLeft)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Math.bitshiftLeft$WhileStartL143)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE3155
-D;JLT
-(FALSE3155)
-@SP
-A=M
-M=0
-@END3155
-0;JMP
-(TRUE3155)
-@SP
-A=M
-M=-1
-(END3155)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.bitshiftLeft$WhileEndL143
-@SP
-AM=M-1
-D=M
-@Math.bitshiftLeft$WhileEndL143
-D;JNE
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop argument 0
-@ARG
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.bitshiftLeft$WhileStartL143
-@Math.bitshiftLeft$WhileStartL143
-0;JMP
-(Math.bitshiftLeft$WhileEndL143)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.abs
-(Math.abs)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE3364
-D;JLT
-(FALSE3364)
-@SP
-A=M
-M=0
-@END3364
-0;JMP
-(TRUE3364)
-@SP
-A=M
-M=-1
-(END3364)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.abs$FalseL144
-@SP
-AM=M-1
-D=M
-@Math.abs$FalseL144
-D;JNE
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Math.abs$TrueL144
-@Math.abs$TrueL144
-0;JMP
-(Math.abs$FalseL144)
-(Math.abs$TrueL144)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.multiply
-(Math.multiply)
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Math.multiply$WhileStartL145)
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 16
-@16
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE3642
-D;JLT
-(FALSE3642)
-@SP
-A=M
-M=0
-@END3642
-0;JMP
-(TRUE3642)
-@SP
-A=M
-M=-1
-(END3642)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.multiply$WhileEndL145
-@SP
-AM=M-1
-D=M
-@Math.multiply$WhileEndL145
-D;JNE
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.multiply$ret.0
+@Main.main$ret.1
 D=A
 @SP
 A=M
@@ -3745,7 +161,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@9
 D=A
 @SP
 D=M-D
@@ -3756,102 +172,55 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.bitshiftLeft
-@Math.bitshiftLeft
+// Goto Screen.drawRectangle
+@Screen.drawRectangle
 0;JMP
-(Math.multiply$ret.0)
-//and
+(Main.main$ret.1)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
 @SP
 AM=M-1
 D=M
-@SP
-AM=M-1
-M=D&M
-@SP
-M=M+1
-//push constant 0
-@0
+@R13
+A=M
+M=D
+//push constant 50
+@50
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//eq
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=D-M
-@TRUE3779
-D;JEQ
-(FALSE3779)
-@SP
-A=M
-M=0
-@END3779
-0;JMP
-(TRUE3779)
-@SP
-A=M
-M=-1
-(END3779)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.multiply$FalseL146
-@SP
-AM=M-1
-D=M
-@Math.multiply$FalseL146
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
+//push constant 50
+@50
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.multiply$ret.1
+@Main.main$ret.2
 D=A
 @SP
 A=M
@@ -3891,7 +260,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@9
 D=A
 @SP
 D=M-D
@@ -3902,324 +271,55 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.bitshiftLeft
-@Math.bitshiftLeft
+// Goto Screen.drawLine
+@Screen.drawLine
 0;JMP
-(Math.multiply$ret.1)
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.multiply$TrueL146
-@Math.multiply$TrueL146
-0;JMP
-(Math.multiply$FalseL146)
-(Math.multiply$TrueL146)
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.multiply$WhileStartL145
-@Math.multiply$WhileStartL145
-0;JMP
-(Math.multiply$WhileEndL145)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
+(Main.main$ret.2)
+//pop temp 0
 @5
 D=A
 @R13
-A=M-D
-D=M
-@R14
 M=D
-// *ARG = pop()
 @SP
 AM=M-1
 D=M
-@ARG
+@R13
 A=M
 M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.divide
-(Math.divide)
-//push constant 0
-@0
+//push constant 100
+@100
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE4077
-D;JGE
-(FALSE4077)
-@SP
-A=M
-M=0
-@END4077
-0;JMP
-(TRUE4077)
-@SP
-A=M
-M=-1
-(END4077)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.divide$FalseL147
-@SP
-AM=M-1
-D=M
-@Math.divide$FalseL147
-D;JNE
-//push constant 0
-@0
+//push constant 100
+@100
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
+//push constant 200
+@200
 D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Math.divide$TrueL147
-@Math.divide$TrueL147
-0;JMP
-(Math.divide$FalseL147)
-(Math.divide$TrueL147)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
 @SP
 M=M+1
 // Push return address to stack
-@Math.divide$ret.0
+@Main.main$ret.3
 D=A
 @SP
 A=M
@@ -4259,7 +359,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@9
 D=A
 @SP
 D=M-D
@@ -4270,15 +370,13 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.divide
-@Math.divide
+// Goto Screen.drawLine
+@Screen.drawLine
 0;JMP
-(Math.divide$ret.0)
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
+(Main.main$ret.3)
+//pop temp 0
+@5
+D=A
 @R13
 M=D
 @SP
@@ -4287,61 +385,40 @@ D=M
 @R13
 A=M
 M=D
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
+//push constant 100
+@100
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
+//push constant 200
+@200
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.divide$ret.1
+@Main.main$ret.4
 D=A
 @SP
 A=M
@@ -4381,7 +458,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@9
 D=A
 @SP
 D=M-D
@@ -4392,293 +469,47 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.multiply
-@Math.multiply
+// Goto Screen.drawLine
+@Screen.drawLine
 0;JMP
-(Math.divide$ret.1)
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE4418
-D;JLT
-(FALSE4418)
-@SP
-A=M
-M=0
-@END4418
-0;JMP
-(TRUE4418)
-@SP
-A=M
-M=-1
-(END4418)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.divide$FalseL148
-@SP
-AM=M-1
-D=M
-@Math.divide$FalseL148
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
+(Main.main$ret.4)
+//pop temp 0
 @5
 D=A
 @R13
-A=M-D
-D=M
-@R14
 M=D
-// *ARG = pop()
 @SP
 AM=M-1
 D=M
-@ARG
+@R13
 A=M
 M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Math.divide$TrueL148
-@Math.divide$TrueL148
-0;JMP
-(Math.divide$FalseL148)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//push constant 1
-@1
+//push constant 11
+@11
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
+//push constant 11
+@11
 D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-(Math.divide$TrueL148)
-//def Function Math.mod
-(Math.mod)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
+//push constant 10
+@10
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.mod$ret.0
+@Main.main$ret.5
 D=A
 @SP
 A=M
@@ -4718,7 +549,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@8
 D=A
 @SP
 D=M-D
@@ -4729,23 +560,47 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.divide
-@Math.divide
+// Goto Screen.drawCircle
+@Screen.drawCircle
 0;JMP
-(Math.mod$ret.0)
-//push argument 1
-@ARG
+(Main.main$ret.5)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
 D=M
-@1
-A=D+A
-D=M
+@R13
+A=M
+M=D
+//push constant 21
+@21
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 21
+@21
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 10
+@10
+D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.mod$ret.1
+@Main.main$ret.6
 D=A
 @SP
 A=M
@@ -4785,7 +640,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@8
 D=A
 @SP
 D=M-D
@@ -4796,219 +651,47 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.multiply
-@Math.multiply
+// Goto Screen.drawCircle
+@Screen.drawCircle
 0;JMP
-(Math.mod$ret.1)
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
+(Main.main$ret.6)
+//pop temp 0
 @5
 D=A
 @R13
-A=M-D
-D=M
-@R14
 M=D
-// *ARG = pop()
 @SP
 AM=M-1
 D=M
-@ARG
+@R13
 A=M
 M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.sqrt
-(Math.sqrt)
-//push constant 0
-@0
+//push constant 31
+@31
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push constant 0
-@0
+//push constant 31
+@31
 D=A
 @SP
 A=M
 M=D
 @SP
 M=M+1
-//push constant 0
-@0
+//push constant 10
+@10
 D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Math.sqrt$WhileStartL149)
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 16
-@16
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE4953
-D;JLT
-(FALSE4953)
-@SP
-A=M
-M=0
-@END4953
-0;JMP
-(TRUE4953)
-@SP
-A=M
-M=-1
-(END4953)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.sqrt$WhileEndL149
-@SP
-AM=M-1
-D=M
-@Math.sqrt$WhileEndL149
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
 @SP
 A=M
 M=D
 @SP
 M=M+1
 // Push return address to stack
-@Math.sqrt$ret.0
+@Main.main$ret.7
 D=A
 @SP
 A=M
@@ -5048,7 +731,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@7
+@8
 D=A
 @SP
 D=M-D
@@ -5059,845 +742,24 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Math.multiply
-@Math.multiply
+// Goto Screen.drawCircle
+@Screen.drawCircle
 0;JMP
-(Math.sqrt$ret.0)
-//pop local 2
-@LCL
-D=M
-@2
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//push local 2
-@LCL
-D=M
-@2
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE5100
-D;JGE
-(FALSE5100)
-@SP
-A=M
-M=0
-@END5100
-0;JMP
-(TRUE5100)
-@SP
-A=M
-M=-1
-(END5100)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.sqrt$FalseL150
-@SP
-AM=M-1
-D=M
-@Math.sqrt$FalseL150
-D;JNE
-//push constant 16
-@16
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.sqrt$TrueL150
-@Math.sqrt$TrueL150
-0;JMP
-(Math.sqrt$FalseL150)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Math.sqrt$TrueL150)
-//push local 1
-@LCL
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//add
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=D+M
-@SP
-M=M+1
-//pop local 1
-@LCL
-D=M
-@1
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.sqrt$WhileStartL149
-@Math.sqrt$WhileStartL149
-0;JMP
-(Math.sqrt$WhileEndL149)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//sub
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-M=M-D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
+(Main.main$ret.7)
+//pop temp 0
 @5
 D=A
 @R13
-A=M-D
-D=M
-@R14
 M=D
-// *ARG = pop()
 @SP
 AM=M-1
 D=M
-@ARG
+@R13
 A=M
 M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//def Function Math.min
-(Math.min)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//lt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE5352
-D;JLT
-(FALSE5352)
-@SP
-A=M
-M=0
-@END5352
-0;JMP
-(TRUE5352)
-@SP
-A=M
-M=-1
-(END5352)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.min$FalseL151
-@SP
-AM=M-1
-D=M
-@Math.min$FalseL151
-D;JNE
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Math.min$TrueL151
-@Math.min$TrueL151
-0;JMP
-(Math.min$FalseL151)
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-(Math.min$TrueL151)
-//def Function Math.max
-(Math.max)
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE5545
-D;JGE
-(FALSE5545)
-@SP
-A=M
-M=0
-@END5545
-0;JMP
-(TRUE5545)
-@SP
-A=M
-M=-1
-(END5545)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.max$FalseL152
-@SP
-AM=M-1
-D=M
-@Math.max$FalseL152
-D;JNE
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-//Goto Math.max$TrueL152
-@Math.max$TrueL152
-0;JMP
-(Math.max$FalseL152)
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Return
-// Frame = LCL
-@LCL
-D=M
-@R13
-M=D
-// RetAddr = *(frame - 5)
-@5
-D=A
-@R13
-A=M-D
-D=M
-@R14
-M=D
-// *ARG = pop()
-@SP
-AM=M-1
-D=M
-@ARG
-A=M
-M=D
-// SP = ARG+1
-@ARG
-D=M+1
-@SP
-M=D
-// THAT = *(frame - 1)
-@R13
-AM=M-1
-D=M
-@THAT
-M=D
-// THIS = *(frame - 2)
-@R13
-AM=M-1
-D=M
-@THIS
-M=D
-// ARG = *(frame - 3)
-@R13
-AM=M-1
-D=M
-@ARG
-M=D
-// LCL = *(frame - 4)
-@R13
-AM=M-1
-D=M
-@LCL
-M=D
-// Goto return address
-@R14
-A=M
-0;JMP
-(Math.max$TrueL152)
-//def Function Math.pow
-(Math.pow)
 //push constant 0
 @0
 D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 1
-@1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-(Math.pow$WhileStartL153)
-//push argument 1
-@ARG
-D=M
-@1
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 0
-@0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//gt
-@SP
-AM=M-1
-D=M
-@SP
-AM=M-1
-D=M-D
-@TRUE5765
-D;JGE
-(FALSE5765)
-@SP
-A=M
-M=0
-@END5765
-0;JMP
-(TRUE5765)
-@SP
-A=M
-M=-1
-(END5765)
-@SP
-M=M+1
-//not
-@SP
-AM=M-1
-M=!M
-@SP
-M=M+1
-//If-Goto Math.pow$WhileEndL153
-@SP
-AM=M-1
-D=M
-@Math.pow$WhileEndL153
-D;JNE
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push argument 0
-@ARG
-D=M
-@0
-A=D+A
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Math.pow$ret.0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
-@THIS
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@7
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Math.multiply
-@Math.multiply
-0;JMP
-(Math.pow$ret.0)
-//pop local 0
-@LCL
-D=M
-@0
-D=D+A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
-//Goto Math.pow$WhileStartL153
-@Math.pow$WhileStartL153
-0;JMP
-(Math.pow$WhileEndL153)
-//push local 0
-@LCL
-D=M
-@0
-A=D+A
-D=M
 @SP
 A=M
 M=D
@@ -5968,7 +830,7 @@ M=D
 @SP
 M=M+1
 //pop static 0
-@._Memory.0
+@Memory.0
 D=A
 @R13
 M=D
@@ -5979,7 +841,7 @@ D=M
 A=M
 M=D
 //push static 0
-@._Memory.0
+@Memory.0
 D=M
 @SP
 A=M
@@ -6055,7 +917,7 @@ D=M
 A=M
 M=D
 //push static 0
-@._Memory.0
+@Memory.0
 D=M
 @SP
 A=M
@@ -6211,7 +1073,7 @@ M=D
 @SP
 M=M+1
 //push static 0
-@._Memory.0
+@Memory.0
 D=M
 @SP
 A=M
@@ -6231,7 +1093,7 @@ D=M
 @R13
 A=M
 M=D
-(Memory.alloc$WhileStartL16)
+(Memory.alloc$WhileStartL57)
 //push argument 0
 @ARG
 D=M
@@ -6317,19 +1179,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE6312
-D;JGE
-(FALSE6312)
+@TRUE1174
+D;JGT
+(FALSE1174)
 @SP
 A=M
 M=0
-@END6312
+@END1174
 0;JMP
-(TRUE6312)
+(TRUE1174)
 @SP
 A=M
 M=-1
-(END6312)
+(END1174)
 @SP
 M=M+1
 //push local 0
@@ -6397,19 +1259,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE6392
+@TRUE1254
 D;JEQ
-(FALSE6392)
+(FALSE1254)
 @SP
 A=M
 M=0
-@END6392
+@END1254
 0;JMP
-(TRUE6392)
+(TRUE1254)
 @SP
 A=M
 M=-1
-(END6392)
+(END1254)
 @SP
 M=M+1
 //not
@@ -6433,11 +1295,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto Memory.alloc$WhileEndL16
+//If-Goto Memory.alloc$WhileEndL57
 @SP
 AM=M-1
 D=M
-@Memory.alloc$WhileEndL16
+@Memory.alloc$WhileEndL57
 D;JNE
 //push local 0
 @LCL
@@ -6502,10 +1364,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto Memory.alloc$WhileStartL16
-@Memory.alloc$WhileStartL16
+//Goto Memory.alloc$WhileStartL57
+@Memory.alloc$WhileStartL57
 0;JMP
-(Memory.alloc$WhileEndL16)
+(Memory.alloc$WhileEndL57)
 //push argument 0
 @ARG
 D=M
@@ -6591,19 +1453,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE6586
-D;JGE
-(FALSE6586)
+@TRUE1448
+D;JGT
+(FALSE1448)
 @SP
 A=M
 M=0
-@END6586
+@END1448
 0;JMP
-(TRUE6586)
+(TRUE1448)
 @SP
 A=M
 M=-1
-(END6586)
+(END1448)
 @SP
 M=M+1
 //not
@@ -6612,11 +1474,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto Memory.alloc$FalseL17
+//If-Goto Memory.alloc$FalseL58
 @SP
 AM=M-1
 D=M
-@Memory.alloc$FalseL17
+@Memory.alloc$FalseL58
 D;JNE
 //push constant 0
 @0
@@ -6680,11 +1542,11 @@ M=D
 @R14
 A=M
 0;JMP
-//Goto Memory.alloc$TrueL17
-@Memory.alloc$TrueL17
+//Goto Memory.alloc$TrueL58
+@Memory.alloc$TrueL58
 0;JMP
-(Memory.alloc$FalseL17)
-(Memory.alloc$TrueL17)
+(Memory.alloc$FalseL58)
+(Memory.alloc$TrueL58)
 //push local 0
 @LCL
 D=M
@@ -7200,7 +2062,7 @@ M=D
 @SP
 M=M+1
 //push static 0
-@._Memory.0
+@Memory.0
 D=M
 @SP
 A=M
@@ -7220,7 +2082,7 @@ D=M
 @R13
 A=M
 M=D
-(Memory.deAlloc$WhileStartL18)
+(Memory.deAlloc$WhileStartL59)
 //push local 0
 @LCL
 D=M
@@ -7286,19 +2148,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE7281
+@TRUE2143
 D;JEQ
-(FALSE7281)
+(FALSE2143)
 @SP
 A=M
 M=0
-@END7281
+@END2143
 0;JMP
-(TRUE7281)
+(TRUE2143)
 @SP
 A=M
 M=-1
-(END7281)
+(END2143)
 @SP
 M=M+1
 //not
@@ -7313,11 +2175,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto Memory.deAlloc$WhileEndL18
+//If-Goto Memory.deAlloc$WhileEndL59
 @SP
 AM=M-1
 D=M
-@Memory.deAlloc$WhileEndL18
+@Memory.deAlloc$WhileEndL59
 D;JNE
 //push local 0
 @LCL
@@ -7382,10 +2244,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto Memory.deAlloc$WhileStartL18
-@Memory.deAlloc$WhileStartL18
+//Goto Memory.deAlloc$WhileStartL59
+@Memory.deAlloc$WhileStartL59
 0;JMP
-(Memory.deAlloc$WhileEndL18)
+(Memory.deAlloc$WhileEndL59)
 //push local 0
 @LCL
 D=M
@@ -7942,10 +2804,18 @@ M=D
 @R14
 A=M
 0;JMP
-//def Function Sys.init
-(Sys.init)
+//def Function Stack.new
+(Stack.new)
+//push constant 3
+@3
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
 // Push return address to stack
-@Sys.init$ret.0
+@Stack.new$ret.8
 D=A
 @SP
 A=M
@@ -7985,7 +2855,7 @@ M=D
 @SP
 M=M+1
 // repostitions ARG
-@5
+@6
 D=A
 @SP
 D=M-D
@@ -7996,13 +2866,499 @@ M=D
 D=M
 @LCL
 M=D
-// Goto Main.main
-@Main.main
+// Goto Memory.alloc
+@Memory.alloc
 0;JMP
-(Sys.init$ret.0)
+(Stack.new$ret.8)
+//pop pointer 0
+@THIS
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Stack.new$ret.9
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@6
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Memory.alloc
+@Memory.alloc
+0;JMP
+(Stack.new$ret.9)
+//pop this 0
+@THIS
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push this 0
+@THIS
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop this 1
+@THIS
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop this 2
+@THIS
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push pointer 0
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Stack.push
+(Stack.push)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop pointer 0
+@THIS
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push this 1
+@THIS
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push this 0
+@THIS
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//push this 2
+@THIS
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE3139
+D;JLT
+(FALSE3139)
+@SP
+A=M
+M=0
+@END3139
+0;JMP
+(TRUE3139)
+@SP
+A=M
+M=-1
+(END3139)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Stack.push$FalseL14
+@SP
+AM=M-1
+D=M
+@Stack.push$FalseL14
+D;JNE
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Stack.push$TrueL14
+@Stack.push$TrueL14
+0;JMP
+(Stack.push$FalseL14)
+(Stack.push$TrueL14)
+//push this 1
+@THIS
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
 //pop temp 0
 @5
 D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push temp 0
+@5
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop that 0
+@THAT
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push this 1
+@THIS
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop this 1
+@THIS
+D=M
+@1
+D=D+A
 @R13
 M=D
 @SP
@@ -8073,8 +3429,164 @@ M=D
 @R14
 A=M
 0;JMP
-//def Function Main.main
-(Main.main)
+//def Function Stack.pop
+(Stack.pop)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop pointer 0
+@THIS
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push this 1
+@THIS
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push this 0
+@THIS
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//eq
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=D-M
+@TRUE3477
+D;JEQ
+(FALSE3477)
+@SP
+A=M
+M=0
+@END3477
+0;JMP
+(TRUE3477)
+@SP
+A=M
+M=-1
+(END3477)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Stack.pop$FalseL15
+@SP
+AM=M-1
+D=M
+@Stack.pop$FalseL15
+D;JNE
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Stack.pop$TrueL15
+@Stack.pop$TrueL15
+0;JMP
+(Stack.pop$FalseL15)
+(Stack.pop$TrueL15)
+//push this 1
+@THIS
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
 //push constant 1
 @1
 D=A
@@ -8083,71 +3595,20 @@ A=M
 M=D
 @SP
 M=M+1
-//neg
+//sub
 @SP
 AM=M-1
-M=-M
-@SP
-M=M+1
-// Push return address to stack
-@Main.main$ret.0
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
 D=M
 @SP
-A=M
-M=D
+AM=M-1
+M=M-D
 @SP
 M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
+//pop this 1
 @THIS
 D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// repostitions ARG
-@6
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Screen.setColor
-@Screen.setColor
-0;JMP
-(Main.main$ret.0)
-//pop temp 0
-@5
-D=A
+@1
+D=D+A
 @R13
 M=D
 @SP
@@ -8156,108 +3617,51 @@ D=M
 @R13
 A=M
 M=D
-//push constant 50
-@50
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 50
-@50
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 100
-@100
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-//push constant 100
-@100
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// Push return address to stack
-@Main.main$ret.1
-D=A
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push LCL
-@LCL
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push ARG
-@ARG
-D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THIS
+//push this 1
 @THIS
 D=M
-@SP
-A=M
-M=D
-@SP
-M=M+1
-// push THAT
-@THAT
+@1
+A=D+A
 D=M
 @SP
 A=M
 M=D
 @SP
 M=M+1
-// repostitions ARG
-@9
-D=A
-@SP
-D=M-D
-@ARG
-M=D
-// repostitions LCL
-@SP
-D=M
-@LCL
-M=D
-// Goto Screen.drawLine
-@Screen.drawLine
-0;JMP
-(Main.main$ret.1)
-//pop temp 0
-@5
-D=A
-@R13
-M=D
-@SP
-AM=M-1
-D=M
-@R13
-A=M
-M=D
 //push constant 0
 @0
 D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push that 0
+@THAT
+D=M
+@0
+A=D+A
+D=M
 @SP
 A=M
 M=D
@@ -8328,7 +3732,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.new$ret.0
+@String.new$ret.10
 D=A
 @SP
 A=M
@@ -8382,7 +3786,7 @@ M=D
 // Goto Memory.alloc
 @Memory.alloc
 0;JMP
-(String.new$ret.0)
+(String.new$ret.10)
 //pop pointer 0
 @THIS
 D=A
@@ -8451,7 +3855,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.new$ret.1
+@String.new$ret.11
 D=A
 @SP
 A=M
@@ -8505,7 +3909,7 @@ M=D
 // Goto Memory.alloc
 @Memory.alloc
 0;JMP
-(String.new$ret.1)
+(String.new$ret.11)
 //pop this 2
 @THIS
 D=M
@@ -8617,7 +4021,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.dispose$ret.0
+@String.dispose$ret.12
 D=A
 @SP
 A=M
@@ -8671,7 +4075,7 @@ M=D
 // Goto Memory.deAlloc
 @Memory.deAlloc
 0;JMP
-(String.dispose$ret.0)
+(String.dispose$ret.12)
 //pop temp 0
 @5
 D=A
@@ -8692,7 +4096,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.dispose$ret.1
+@String.dispose$ret.13
 D=A
 @SP
 A=M
@@ -8746,7 +4150,7 @@ M=D
 // Goto Memory.deAlloc
 @Memory.deAlloc
 0;JMP
-(String.dispose$ret.1)
+(String.dispose$ret.13)
 //pop temp 0
 @5
 D=A
@@ -8959,19 +4363,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE8954
+@TRUE4358
 D;JLT
-(FALSE8954)
+(FALSE4358)
 @SP
 A=M
 M=0
-@END8954
+@END4358
 0;JMP
-(TRUE8954)
+(TRUE4358)
 @SP
 A=M
 M=-1
-(END8954)
+(END4358)
 @SP
 M=M+1
 //push argument 1
@@ -9003,19 +4407,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE8998
-D;JGE
-(FALSE8998)
+@TRUE4402
+D;JGT
+(FALSE4402)
 @SP
 A=M
 M=0
-@END8998
+@END4402
 0;JMP
-(TRUE8998)
+(TRUE4402)
 @SP
 A=M
 M=-1
-(END8998)
+(END4402)
 @SP
 M=M+1
 //or
@@ -9056,19 +4460,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE9051
+@TRUE4455
 D;JEQ
-(FALSE9051)
+(FALSE4455)
 @SP
 A=M
 M=0
-@END9051
+@END4455
 0;JMP
-(TRUE9051)
+(TRUE4455)
 @SP
 A=M
 M=-1
-(END9051)
+(END4455)
 @SP
 M=M+1
 //or
@@ -9086,11 +4490,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.charAt$FalseL5
+//If-Goto String.charAt$FalseL116
 @SP
 AM=M-1
 D=M
-@String.charAt$FalseL5
+@String.charAt$FalseL116
 D;JNE
 //push constant 0
 @0
@@ -9154,11 +4558,11 @@ M=D
 @R14
 A=M
 0;JMP
-//Goto String.charAt$TrueL5
-@String.charAt$TrueL5
+//Goto String.charAt$TrueL116
+@String.charAt$TrueL116
 0;JMP
-(String.charAt$FalseL5)
-(String.charAt$TrueL5)
+(String.charAt$FalseL116)
+(String.charAt$TrueL116)
 //push this 2
 @THIS
 D=M
@@ -9316,19 +4720,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE9311
+@TRUE4715
 D;JLT
-(FALSE9311)
+(FALSE4715)
 @SP
 A=M
 M=0
-@END9311
+@END4715
 0;JMP
-(TRUE9311)
+(TRUE4715)
 @SP
 A=M
 M=-1
-(END9311)
+(END4715)
 @SP
 M=M+1
 //push argument 1
@@ -9360,19 +4764,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE9355
-D;JGE
-(FALSE9355)
+@TRUE4759
+D;JGT
+(FALSE4759)
 @SP
 A=M
 M=0
-@END9355
+@END4759
 0;JMP
-(TRUE9355)
+(TRUE4759)
 @SP
 A=M
 M=-1
-(END9355)
+(END4759)
 @SP
 M=M+1
 //or
@@ -9413,19 +4817,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE9408
+@TRUE4812
 D;JEQ
-(FALSE9408)
+(FALSE4812)
 @SP
 A=M
 M=0
-@END9408
+@END4812
 0;JMP
-(TRUE9408)
+(TRUE4812)
 @SP
 A=M
 M=-1
-(END9408)
+(END4812)
 @SP
 M=M+1
 //or
@@ -9443,11 +4847,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.setCharAt$FalseL6
+//If-Goto String.setCharAt$FalseL117
 @SP
 AM=M-1
 D=M
-@String.setCharAt$FalseL6
+@String.setCharAt$FalseL117
 D;JNE
 //push constant 0
 @0
@@ -9511,11 +4915,11 @@ M=D
 @R14
 A=M
 0;JMP
-//Goto String.setCharAt$TrueL6
-@String.setCharAt$TrueL6
+//Goto String.setCharAt$TrueL117
+@String.setCharAt$TrueL117
 0;JMP
-(String.setCharAt$FalseL6)
-(String.setCharAt$TrueL6)
+(String.setCharAt$FalseL117)
+(String.setCharAt$TrueL117)
 //push this 2
 @THIS
 D=M
@@ -9716,19 +5120,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE9711
+@TRUE5115
 D;JEQ
-(FALSE9711)
+(FALSE5115)
 @SP
 A=M
 M=0
-@END9711
+@END5115
 0;JMP
-(TRUE9711)
+(TRUE5115)
 @SP
 A=M
 M=-1
-(END9711)
+(END5115)
 @SP
 M=M+1
 //not
@@ -9737,11 +5141,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.appendChar$FalseL7
+//If-Goto String.appendChar$FalseL118
 @SP
 AM=M-1
 D=M
-@String.appendChar$FalseL7
+@String.appendChar$FalseL118
 D;JNE
 //push this 2
 @THIS
@@ -9808,11 +5212,11 @@ M=D
 @R14
 A=M
 0;JMP
-//Goto String.appendChar$TrueL7
-@String.appendChar$TrueL7
+//Goto String.appendChar$TrueL118
+@String.appendChar$TrueL118
 0;JMP
-(String.appendChar$FalseL7)
-(String.appendChar$TrueL7)
+(String.appendChar$FalseL118)
+(String.appendChar$TrueL118)
 //push this 2
 @THIS
 D=M
@@ -10250,7 +5654,7 @@ D=M
 @R13
 A=M
 M=D
-(String.intValue$WhileStartL8)
+(String.intValue$WhileStartL119)
 //push this 2
 @THIS
 D=M
@@ -10336,19 +5740,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE10331
-D;JGE
-(FALSE10331)
+@TRUE5735
+D;JGT
+(FALSE5735)
 @SP
 A=M
 M=0
-@END10331
+@END5735
 0;JMP
-(TRUE10331)
+(TRUE5735)
 @SP
 A=M
 M=-1
-(END10331)
+(END5735)
 @SP
 M=M+1
 //push this 2
@@ -10436,19 +5840,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE10431
+@TRUE5835
 D;JLT
-(FALSE10431)
+(FALSE5835)
 @SP
 A=M
 M=0
-@END10431
+@END5835
 0;JMP
-(TRUE10431)
+(TRUE5835)
 @SP
 A=M
 M=-1
-(END10431)
+(END5835)
 @SP
 M=M+1
 //and
@@ -10506,19 +5910,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE10501
+@TRUE5905
 D;JLT
-(FALSE10501)
+(FALSE5905)
 @SP
 A=M
 M=0
-@END10501
+@END5905
 0;JMP
-(TRUE10501)
+(TRUE5905)
 @SP
 A=M
 M=-1
-(END10501)
+(END5905)
 @SP
 M=M+1
 //and
@@ -10536,11 +5940,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.intValue$WhileEndL8
+//If-Goto String.intValue$WhileEndL119
 @SP
 AM=M-1
 D=M
-@String.intValue$WhileEndL8
+@String.intValue$WhileEndL119
 D;JNE
 //push local 2
 @LCL
@@ -10583,10 +5987,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto String.intValue$WhileStartL8
-@String.intValue$WhileStartL8
+//Goto String.intValue$WhileStartL119
+@String.intValue$WhileStartL119
 0;JMP
-(String.intValue$WhileEndL8)
+(String.intValue$WhileEndL119)
 //push this 2
 @THIS
 D=M
@@ -10641,7 +6045,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.intValue$ret.0
+@String.intValue$ret.14
 D=A
 @SP
 A=M
@@ -10695,7 +6099,7 @@ M=D
 // Goto Output.printInt
 @Output.printInt
 0;JMP
-(String.intValue$ret.0)
+(String.intValue$ret.14)
 //pop temp 0
 @5
 D=A
@@ -10708,7 +6112,7 @@ D=M
 A=M
 M=D
 // Push return address to stack
-@String.intValue$ret.1
+@String.intValue$ret.15
 D=A
 @SP
 A=M
@@ -10762,7 +6166,7 @@ M=D
 // Goto Output.println
 @Output.println
 0;JMP
-(String.intValue$ret.1)
+(String.intValue$ret.15)
 //pop temp 0
 @5
 D=A
@@ -10786,7 +6190,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.intValue$ret.2
+@String.intValue$ret.16
 D=A
 @SP
 A=M
@@ -10840,7 +6244,7 @@ M=D
 // Goto Output.printInt
 @Output.printInt
 0;JMP
-(String.intValue$ret.2)
+(String.intValue$ret.16)
 //pop temp 0
 @5
 D=A
@@ -10853,7 +6257,7 @@ D=M
 A=M
 M=D
 // Push return address to stack
-@String.intValue$ret.3
+@String.intValue$ret.17
 D=A
 @SP
 A=M
@@ -10907,7 +6311,7 @@ M=D
 // Goto Output.println
 @Output.println
 0;JMP
-(String.intValue$ret.3)
+(String.intValue$ret.17)
 //pop temp 0
 @5
 D=A
@@ -10919,7 +6323,7 @@ D=M
 @R13
 A=M
 M=D
-(String.intValue$WhileStartL9)
+(String.intValue$WhileStartL120)
 //push local 2
 @LCL
 D=M
@@ -10952,19 +6356,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE10947
-D;JGE
-(FALSE10947)
+@TRUE6351
+D;JGT
+(FALSE6351)
 @SP
 A=M
 M=0
-@END10947
+@END6351
 0;JMP
-(TRUE10947)
+(TRUE6351)
 @SP
 A=M
 M=-1
-(END10947)
+(END6351)
 @SP
 M=M+1
 //not
@@ -10973,11 +6377,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.intValue$WhileEndL9
+//If-Goto String.intValue$WhileEndL120
 @SP
 AM=M-1
 D=M
-@String.intValue$WhileEndL9
+@String.intValue$WhileEndL120
 D;JNE
 //push local 0
 @LCL
@@ -11072,7 +6476,7 @@ M=M-D
 @SP
 M=M+1
 // Push return address to stack
-@String.intValue$ret.4
+@String.intValue$ret.18
 D=A
 @SP
 A=M
@@ -11126,7 +6530,7 @@ M=D
 // Goto Math.multiply
 @Math.multiply
 0;JMP
-(String.intValue$ret.4)
+(String.intValue$ret.18)
 //add
 @SP
 AM=M-1
@@ -11169,7 +6573,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.intValue$ret.5
+@String.intValue$ret.19
 D=A
 @SP
 A=M
@@ -11223,7 +6627,7 @@ M=D
 // Goto Math.multiply
 @Math.multiply
 0;JMP
-(String.intValue$ret.5)
+(String.intValue$ret.19)
 //pop local 1
 @LCL
 D=M
@@ -11278,10 +6682,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto String.intValue$WhileStartL9
-@String.intValue$WhileStartL9
+//Goto String.intValue$WhileStartL120
+@String.intValue$WhileStartL120
 0;JMP
-(String.intValue$WhileEndL9)
+(String.intValue$WhileEndL120)
 //push local 0
 @LCL
 D=M
@@ -11417,7 +6821,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.0
+@String.setInt$ret.20
 D=A
 @SP
 A=M
@@ -11471,7 +6875,7 @@ M=D
 // Goto Stack.new
 @Stack.new
 0;JMP
-(String.setInt$ret.0)
+(String.setInt$ret.20)
 //pop local 1
 @LCL
 D=M
@@ -11506,7 +6910,7 @@ D=M
 @R13
 A=M
 M=D
-(String.setInt$WhileStartL10)
+(String.setInt$WhileStartL121)
 //push argument 1
 @ARG
 D=M
@@ -11527,7 +6931,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.1
+@String.setInt$ret.21
 D=A
 @SP
 A=M
@@ -11581,7 +6985,7 @@ M=D
 // Goto Math.divide
 @Math.divide
 0;JMP
-(String.setInt$ret.1)
+(String.setInt$ret.21)
 //push constant 0
 @0
 D=A
@@ -11597,19 +7001,19 @@ D=M
 @SP
 AM=M-1
 D=D-M
-@TRUE11592
+@TRUE6996
 D;JEQ
-(FALSE11592)
+(FALSE6996)
 @SP
 A=M
 M=0
-@END11592
+@END6996
 0;JMP
-(TRUE11592)
+(TRUE6996)
 @SP
 A=M
 M=-1
-(END11592)
+(END6996)
 @SP
 M=M+1
 //not
@@ -11624,11 +7028,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.setInt$WhileEndL10
+//If-Goto String.setInt$WhileEndL121
 @SP
 AM=M-1
 D=M
-@String.setInt$WhileEndL10
+@String.setInt$WhileEndL121
 D;JNE
 //push local 1
 @LCL
@@ -11661,7 +7065,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.2
+@String.setInt$ret.22
 D=A
 @SP
 A=M
@@ -11715,9 +7119,9 @@ M=D
 // Goto Math.mod
 @Math.mod
 0;JMP
-(String.setInt$ret.2)
+(String.setInt$ret.22)
 // Push return address to stack
-@String.setInt$ret.3
+@String.setInt$ret.23
 D=A
 @SP
 A=M
@@ -11771,7 +7175,7 @@ M=D
 // Goto Stack.push
 @Stack.push
 0;JMP
-(String.setInt$ret.3)
+(String.setInt$ret.23)
 //pop temp 0
 @5
 D=A
@@ -11803,7 +7207,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.4
+@String.setInt$ret.24
 D=A
 @SP
 A=M
@@ -11857,7 +7261,7 @@ M=D
 // Goto Math.divide
 @Math.divide
 0;JMP
-(String.setInt$ret.4)
+(String.setInt$ret.24)
 //pop argument 1
 @ARG
 D=M
@@ -11912,10 +7316,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto String.setInt$WhileStartL10
-@String.setInt$WhileStartL10
+//Goto String.setInt$WhileStartL121
+@String.setInt$WhileStartL121
 0;JMP
-(String.setInt$WhileEndL10)
+(String.setInt$WhileEndL121)
 //push local 1
 @LCL
 D=M
@@ -11947,7 +7351,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.5
+@String.setInt$ret.25
 D=A
 @SP
 A=M
@@ -12001,9 +7405,9 @@ M=D
 // Goto Math.mod
 @Math.mod
 0;JMP
-(String.setInt$ret.5)
+(String.setInt$ret.25)
 // Push return address to stack
-@String.setInt$ret.6
+@String.setInt$ret.26
 D=A
 @SP
 A=M
@@ -12057,7 +7461,7 @@ M=D
 // Goto Stack.push
 @Stack.push
 0;JMP
-(String.setInt$ret.6)
+(String.setInt$ret.26)
 //pop temp 0
 @5
 D=A
@@ -12069,7 +7473,7 @@ D=M
 @R13
 A=M
 M=D
-(String.setInt$WhileStartL11)
+(String.setInt$WhileStartL122)
 //push local 0
 @LCL
 D=M
@@ -12096,19 +7500,19 @@ D=M
 @SP
 AM=M-1
 D=M-D
-@TRUE12091
-D;JGE
-(FALSE12091)
+@TRUE7495
+D;JGT
+(FALSE7495)
 @SP
 A=M
 M=0
-@END12091
+@END7495
 0;JMP
-(TRUE12091)
+(TRUE7495)
 @SP
 A=M
 M=-1
-(END12091)
+(END7495)
 @SP
 M=M+1
 //not
@@ -12117,11 +7521,11 @@ AM=M-1
 M=!M
 @SP
 M=M+1
-//If-Goto String.setInt$WhileEndL11
+//If-Goto String.setInt$WhileEndL122
 @SP
 AM=M-1
 D=M
-@String.setInt$WhileEndL11
+@String.setInt$WhileEndL122
 D;JNE
 //push pointer 0
 @THIS
@@ -12143,7 +7547,7 @@ M=D
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.7
+@String.setInt$ret.27
 D=A
 @SP
 A=M
@@ -12197,7 +7601,7 @@ M=D
 // Goto Stack.pop
 @Stack.pop
 0;JMP
-(String.setInt$ret.7)
+(String.setInt$ret.27)
 //push constant 48
 @48
 D=A
@@ -12216,7 +7620,7 @@ M=D+M
 @SP
 M=M+1
 // Push return address to stack
-@String.setInt$ret.8
+@String.setInt$ret.28
 D=A
 @SP
 A=M
@@ -12270,7 +7674,7 @@ M=D
 // Goto String.appendChar
 @String.appendChar
 0;JMP
-(String.setInt$ret.8)
+(String.setInt$ret.28)
 //pop temp 0
 @5
 D=A
@@ -12323,10 +7727,10 @@ D=M
 @R13
 A=M
 M=D
-//Goto String.setInt$WhileStartL11
-@String.setInt$WhileStartL11
+//Goto String.setInt$WhileStartL122
+@String.setInt$WhileStartL122
 0;JMP
-(String.setInt$WhileEndL11)
+(String.setInt$WhileEndL122)
 //push constant 0
 @0
 D=A
@@ -12522,6 +7926,7941 @@ A=M
 //push constant 128
 @128
 D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.clearScreen
+(Screen.clearScreen)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16384
+@16384
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Screen.clearScreen$WhileStartL238)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 24576
+@24576
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE8038
+D;JLT
+(FALSE8038)
+@SP
+A=M
+M=0
+@END8038
+0;JMP
+(TRUE8038)
+@SP
+A=M
+M=-1
+(END8038)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.clearScreen$WhileEndL238
+@SP
+AM=M-1
+D=M
+@Screen.clearScreen$WhileEndL238
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push temp 0
+@5
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop that 0
+@THAT
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.clearScreen$WhileStartL238
+@Screen.clearScreen$WhileStartL238
+0;JMP
+(Screen.clearScreen$WhileEndL238)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.setColor
+(Screen.setColor)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop static 0
+@Screen.0
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.cordToMemLoc
+(Screen.cordToMemLoc)
+//push constant 16384
+@16384
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16
+@16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.cordToMemLoc$ret.29
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.divide
+@Math.divide
+0;JMP
+(Screen.cordToMemLoc$ret.29)
+//push constant 32
+@32
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.cordToMemLoc$ret.30
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Screen.cordToMemLoc$ret.30)
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.drawPixel
+(Screen.drawPixel)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 255
+@255
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE8621
+D;JGT
+(FALSE8621)
+@SP
+A=M
+M=0
+@END8621
+0;JMP
+(TRUE8621)
+@SP
+A=M
+M=-1
+(END8621)
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 511
+@511
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE8662
+D;JGT
+(FALSE8662)
+@SP
+A=M
+M=0
+@END8662
+0;JMP
+(TRUE8662)
+@SP
+A=M
+M=-1
+(END8662)
+@SP
+M=M+1
+//or
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D|M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawPixel$FalseL239
+@SP
+AM=M-1
+D=M
+@Screen.drawPixel$FalseL239
+D;JNE
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Screen.drawPixel$TrueL239
+@Screen.drawPixel$TrueL239
+0;JMP
+(Screen.drawPixel$FalseL239)
+(Screen.drawPixel$TrueL239)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawPixel$ret.31
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.cordToMemLoc
+@Screen.cordToMemLoc
+0;JMP
+(Screen.drawPixel$ret.31)
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16
+@16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawPixel$ret.32
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.mod
+@Math.mod
+0;JMP
+(Screen.drawPixel$ret.32)
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawPixel$ret.33
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.bitshiftLeft
+@Math.bitshiftLeft
+0;JMP
+(Screen.drawPixel$ret.33)
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push static 0
+@Screen.0
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawPixel$FalseL240
+@SP
+AM=M-1
+D=M
+@Screen.drawPixel$FalseL240
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push that 0
+@THAT
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//or
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D|M
+@SP
+M=M+1
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push temp 0
+@5
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop that 0
+@THAT
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.drawPixel$TrueL240
+@Screen.drawPixel$TrueL240
+0;JMP
+(Screen.drawPixel$FalseL240)
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push that 0
+@THAT
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//and
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D&M
+@SP
+M=M+1
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push temp 0
+@5
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop that 0
+@THAT
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Screen.drawPixel$TrueL240)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.drawLine
+(Screen.drawLine)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 3
+@ARG
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 3
+@LCL
+D=M
+@3
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 4
+@LCL
+D=M
+@4
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//eq
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=D-M
+@TRUE9658
+D;JEQ
+(FALSE9658)
+@SP
+A=M
+M=0
+@END9658
+0;JMP
+(TRUE9658)
+@SP
+A=M
+M=-1
+(END9658)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$FalseL241
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$FalseL241
+D;JNE
+(Screen.drawLine$WhileStartL242)
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE9715
+D;JGT
+(FALSE9715)
+@SP
+A=M
+M=0
+@END9715
+0;JMP
+(TRUE9715)
+@SP
+A=M
+M=-1
+(END9715)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$WhileEndL242
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$WhileEndL242
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawLine$ret.34
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawPixel
+@Screen.drawPixel
+0;JMP
+(Screen.drawLine$ret.34)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.drawLine$WhileStartL242
+@Screen.drawLine$WhileStartL242
+0;JMP
+(Screen.drawLine$WhileEndL242)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Screen.drawLine$TrueL241
+@Screen.drawLine$TrueL241
+0;JMP
+(Screen.drawLine$FalseL241)
+(Screen.drawLine$TrueL241)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//eq
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=D-M
+@TRUE9995
+D;JEQ
+(FALSE9995)
+@SP
+A=M
+M=0
+@END9995
+0;JMP
+(TRUE9995)
+@SP
+A=M
+M=-1
+(END9995)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$FalseL243
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$FalseL243
+D;JNE
+(Screen.drawLine$WhileStartL244)
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE10052
+D;JGT
+(FALSE10052)
+@SP
+A=M
+M=0
+@END10052
+0;JMP
+(TRUE10052)
+@SP
+A=M
+M=-1
+(END10052)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$WhileEndL244
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$WhileEndL244
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawLine$ret.35
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawPixel
+@Screen.drawPixel
+0;JMP
+(Screen.drawLine$ret.35)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 3
+@LCL
+D=M
+@3
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.drawLine$WhileStartL244
+@Screen.drawLine$WhileStartL244
+0;JMP
+(Screen.drawLine$WhileEndL244)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Screen.drawLine$TrueL243
+@Screen.drawLine$TrueL243
+0;JMP
+(Screen.drawLine$FalseL243)
+(Screen.drawLine$TrueL243)
+(Screen.drawLine$WhileStartL245)
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE10336
+D;JGT
+(FALSE10336)
+@SP
+A=M
+M=0
+@END10336
+0;JMP
+(TRUE10336)
+@SP
+A=M
+M=-1
+(END10336)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE10386
+D;JGT
+(FALSE10386)
+@SP
+A=M
+M=0
+@END10386
+0;JMP
+(TRUE10386)
+@SP
+A=M
+M=-1
+(END10386)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//and
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D&M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$WhileEndL245
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$WhileEndL245
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawLine$ret.36
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawPixel
+@Screen.drawPixel
+0;JMP
+(Screen.drawLine$ret.36)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 4
+@LCL
+D=M
+@4
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE10583
+D;JLT
+(FALSE10583)
+@SP
+A=M
+M=0
+@END10583
+0;JMP
+(TRUE10583)
+@SP
+A=M
+M=-1
+(END10583)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawLine$FalseL246
+@SP
+AM=M-1
+D=M
+@Screen.drawLine$FalseL246
+D;JNE
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 4
+@LCL
+D=M
+@4
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 4
+@LCL
+D=M
+@4
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.drawLine$TrueL246
+@Screen.drawLine$TrueL246
+0;JMP
+(Screen.drawLine$FalseL246)
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 3
+@LCL
+D=M
+@3
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 4
+@LCL
+D=M
+@4
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop local 4
+@LCL
+D=M
+@4
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Screen.drawLine$TrueL246)
+//Goto Screen.drawLine$WhileStartL245
+@Screen.drawLine$WhileStartL245
+0;JMP
+(Screen.drawLine$WhileEndL245)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.drawRectangle
+(Screen.drawRectangle)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawRectangle$ret.37
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@9
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawLine
+@Screen.drawLine
+0;JMP
+(Screen.drawRectangle$ret.37)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 3
+@ARG
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 3
+@ARG
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawRectangle$ret.38
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@9
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawLine
+@Screen.drawLine
+0;JMP
+(Screen.drawRectangle$ret.38)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 3
+@ARG
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawRectangle$ret.39
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@9
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawLine
+@Screen.drawLine
+0;JMP
+(Screen.drawRectangle$ret.39)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 3
+@ARG
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawRectangle$ret.40
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@9
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawLine
+@Screen.drawLine
+0;JMP
+(Screen.drawRectangle$ret.40)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Screen.drawCircle
+(Screen.drawCircle)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//neg
+@SP
+AM=M-1
+M=-M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Screen.drawCircle$WhileStartL247)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE11493
+D;JGT
+(FALSE11493)
+@SP
+A=M
+M=0
+@END11493
+0;JMP
+(TRUE11493)
+@SP
+A=M
+M=-1
+(END11493)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Screen.drawCircle$WhileEndL247
+@SP
+AM=M-1
+D=M
+@Screen.drawCircle$WhileEndL247
+D;JNE
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 2
+@ARG
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawCircle$ret.41
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Screen.drawCircle$ret.41)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawCircle$ret.42
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Screen.drawCircle$ret.42)
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawCircle$ret.43
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@6
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.sqrt
+@Math.sqrt
+0;JMP
+(Screen.drawCircle$ret.43)
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop local 3
+@LCL
+D=M
+@3
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 5
+@LCL
+D=M
+@5
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 4
+@LCL
+D=M
+@4
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 4
+@LCL
+D=M
+@4
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 5
+@LCL
+D=M
+@5
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 4
+@LCL
+D=M
+@4
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Screen.drawCircle$ret.44
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@9
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Screen.drawLine
+@Screen.drawLine
+0;JMP
+(Screen.drawCircle$ret.44)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Screen.drawCircle$WhileStartL247
+@Screen.drawCircle$WhileStartL247
+0;JMP
+(Screen.drawCircle$WhileEndL247)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Sys.init
+(Sys.init)
+// Push return address to stack
+@Sys.init$ret.45
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@5
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Memory.init
+@Memory.init
+0;JMP
+(Sys.init$ret.45)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+// Push return address to stack
+@Sys.init$ret.46
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@5
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.init
+@Math.init
+0;JMP
+(Sys.init$ret.46)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+// Push return address to stack
+@Sys.init$ret.47
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@5
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Main.main
+@Main.main
+0;JMP
+(Sys.init$ret.47)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Sys.init$WhileStartL485)
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//neg
+@SP
+AM=M-1
+M=-M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Sys.init$WhileEndL485
+@SP
+AM=M-1
+D=M
+@Sys.init$WhileEndL485
+D;JNE
+//Goto Sys.init$WhileStartL485
+@Sys.init$WhileStartL485
+0;JMP
+(Sys.init$WhileEndL485)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.init
+(Math.init)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16
+@16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.init$ret.48
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@6
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Memory.alloc
+@Memory.alloc
+0;JMP
+(Math.init$ret.48)
+//pop static 0
+@Math.0
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Math.init$WhileStartL1)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16
+@16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE12518
+D;JLT
+(FALSE12518)
+@SP
+A=M
+M=0
+@END12518
+0;JMP
+(TRUE12518)
+@SP
+A=M
+M=-1
+(END12518)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.init$WhileEndL1
+@SP
+AM=M-1
+D=M
+@Math.init$WhileEndL1
+D;JNE
+//push static 0
+@Math.0
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push constant 2
+@2
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.init$ret.49
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.pow
+@Math.pow
+0;JMP
+(Math.init$ret.49)
+//pop temp 0
+@5
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push temp 0
+@5
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop that 0
+@THAT
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.init$WhileStartL1
+@Math.init$WhileStartL1
+0;JMP
+(Math.init$WhileEndL1)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.bitshiftLeft
+(Math.bitshiftLeft)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Math.bitshiftLeft$WhileStartL2)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE12859
+D;JLT
+(FALSE12859)
+@SP
+A=M
+M=0
+@END12859
+0;JMP
+(TRUE12859)
+@SP
+A=M
+M=-1
+(END12859)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.bitshiftLeft$WhileEndL2
+@SP
+AM=M-1
+D=M
+@Math.bitshiftLeft$WhileEndL2
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop argument 0
+@ARG
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.bitshiftLeft$WhileStartL2
+@Math.bitshiftLeft$WhileStartL2
+0;JMP
+(Math.bitshiftLeft$WhileEndL2)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.abs
+(Math.abs)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE13068
+D;JLT
+(FALSE13068)
+@SP
+A=M
+M=0
+@END13068
+0;JMP
+(TRUE13068)
+@SP
+A=M
+M=-1
+(END13068)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.abs$FalseL3
+@SP
+AM=M-1
+D=M
+@Math.abs$FalseL3
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.abs$TrueL3
+@Math.abs$TrueL3
+0;JMP
+(Math.abs$FalseL3)
+(Math.abs$TrueL3)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.multiply
+(Math.multiply)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Math.multiply$WhileStartL4)
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 16
+@16
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE13346
+D;JLT
+(FALSE13346)
+@SP
+A=M
+M=0
+@END13346
+0;JMP
+(TRUE13346)
+@SP
+A=M
+M=-1
+(END13346)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.multiply$WhileEndL4
+@SP
+AM=M-1
+D=M
+@Math.multiply$WhileEndL4
+D;JNE
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.multiply$ret.50
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.bitshiftLeft
+@Math.bitshiftLeft
+0;JMP
+(Math.multiply$ret.50)
+//and
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D&M
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//eq
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=D-M
+@TRUE13483
+D;JEQ
+(FALSE13483)
+@SP
+A=M
+M=0
+@END13483
+0;JMP
+(TRUE13483)
+@SP
+A=M
+M=-1
+(END13483)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.multiply$FalseL5
+@SP
+AM=M-1
+D=M
+@Math.multiply$FalseL5
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.multiply$ret.51
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.bitshiftLeft
+@Math.bitshiftLeft
+0;JMP
+(Math.multiply$ret.51)
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.multiply$TrueL5
+@Math.multiply$TrueL5
+0;JMP
+(Math.multiply$FalseL5)
+(Math.multiply$TrueL5)
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.multiply$WhileStartL4
+@Math.multiply$WhileStartL4
+0;JMP
+(Math.multiply$WhileEndL4)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.divide
+(Math.divide)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE13781
+D;JGT
+(FALSE13781)
+@SP
+A=M
+M=0
+@END13781
+0;JMP
+(TRUE13781)
+@SP
+A=M
+M=-1
+(END13781)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.divide$FalseL6
+@SP
+AM=M-1
+D=M
+@Math.divide$FalseL6
+D;JNE
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.divide$TrueL6
+@Math.divide$TrueL6
+0;JMP
+(Math.divide$FalseL6)
+(Math.divide$TrueL6)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Push return address to stack
+@Math.divide$ret.52
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.divide
+@Math.divide
+0;JMP
+(Math.divide$ret.52)
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.divide$ret.53
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Math.divide$ret.53)
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE14122
+D;JLT
+(FALSE14122)
+@SP
+A=M
+M=0
+@END14122
+0;JMP
+(TRUE14122)
+@SP
+A=M
+M=-1
+(END14122)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.divide$FalseL7
+@SP
+AM=M-1
+D=M
+@Math.divide$FalseL7
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.divide$TrueL7
+@Math.divide$TrueL7
+0;JMP
+(Math.divide$FalseL7)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+(Math.divide$TrueL7)
+//def Function Math.mod
+(Math.mod)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.mod$ret.54
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.divide
+@Math.divide
+0;JMP
+(Math.mod$ret.54)
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.mod$ret.55
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Math.mod$ret.55)
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.sqrt
+(Math.sqrt)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 7
+@7
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Math.sqrt$WhileStartL8)
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE14665
+D;JLT
+(FALSE14665)
+@SP
+A=M
+M=0
+@END14665
+0;JMP
+(TRUE14665)
+@SP
+A=M
+M=-1
+(END14665)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.sqrt$WhileEndL8
+@SP
+AM=M-1
+D=M
+@Math.sqrt$WhileEndL8
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push static 0
+@Math.0
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop pointer 1
+@THAT
+D=A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push that 0
+@THAT
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//add
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D+M
+@SP
+M=M+1
+//pop local 2
+@LCL
+D=M
+@2
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.sqrt$ret.56
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Math.sqrt$ret.56)
+//pop local 3
+@LCL
+D=M
+@3
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE14901
+D;JGT
+(FALSE14901)
+@SP
+A=M
+M=0
+@END14901
+0;JMP
+(TRUE14901)
+@SP
+A=M
+M=-1
+(END14901)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//push local 3
+@LCL
+D=M
+@3
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE14948
+D;JGT
+(FALSE14948)
+@SP
+A=M
+M=0
+@END14948
+0;JMP
+(TRUE14948)
+@SP
+A=M
+M=-1
+(END14948)
+@SP
+M=M+1
+//and
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=D&M
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.sqrt$FalseL9
+@SP
+AM=M-1
+D=M
+@Math.sqrt$FalseL9
+D;JNE
+//push local 2
+@LCL
+D=M
+@2
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.sqrt$TrueL9
+@Math.sqrt$TrueL9
+0;JMP
+(Math.sqrt$FalseL9)
+(Math.sqrt$TrueL9)
+//push local 1
+@LCL
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop local 1
+@LCL
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.sqrt$WhileStartL8
+@Math.sqrt$WhileStartL8
+0;JMP
+(Math.sqrt$WhileEndL8)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//def Function Math.min
+(Math.min)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//lt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE15154
+D;JLT
+(FALSE15154)
+@SP
+A=M
+M=0
+@END15154
+0;JMP
+(TRUE15154)
+@SP
+A=M
+M=-1
+(END15154)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.min$FalseL10
+@SP
+AM=M-1
+D=M
+@Math.min$FalseL10
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.min$TrueL10
+@Math.min$TrueL10
+0;JMP
+(Math.min$FalseL10)
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+(Math.min$TrueL10)
+//def Function Math.max
+(Math.max)
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE15347
+D;JGT
+(FALSE15347)
+@SP
+A=M
+M=0
+@END15347
+0;JMP
+(TRUE15347)
+@SP
+A=M
+M=-1
+(END15347)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.max$FalseL11
+@SP
+AM=M-1
+D=M
+@Math.max$FalseL11
+D;JNE
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.max$TrueL11
+@Math.max$TrueL11
+0;JMP
+(Math.max$FalseL11)
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+(Math.max$TrueL11)
+//def Function Math.pow
+(Math.pow)
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//eq
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=D-M
+@TRUE15545
+D;JEQ
+(FALSE15545)
+@SP
+A=M
+M=0
+@END15545
+0;JMP
+(TRUE15545)
+@SP
+A=M
+M=-1
+(END15545)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.pow$FalseL12
+@SP
+AM=M-1
+D=M
+@Math.pow$FalseL12
+D;JNE
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Return
+// Frame = LCL
+@LCL
+D=M
+@R13
+M=D
+// RetAddr = *(frame - 5)
+@5
+D=A
+@R13
+A=M-D
+D=M
+@R14
+M=D
+// *ARG = pop()
+@SP
+AM=M-1
+D=M
+@ARG
+A=M
+M=D
+// SP = ARG+1
+@ARG
+D=M+1
+@SP
+M=D
+// THAT = *(frame - 1)
+@R13
+AM=M-1
+D=M
+@THAT
+M=D
+// THIS = *(frame - 2)
+@R13
+AM=M-1
+D=M
+@THIS
+M=D
+// ARG = *(frame - 3)
+@R13
+AM=M-1
+D=M
+@ARG
+M=D
+// LCL = *(frame - 4)
+@R13
+AM=M-1
+D=M
+@LCL
+M=D
+// Goto return address
+@R14
+A=M
+0;JMP
+//Goto Math.pow$TrueL12
+@Math.pow$TrueL12
+0;JMP
+(Math.pow$FalseL12)
+(Math.pow$TrueL12)
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+(Math.pow$WhileStartL13)
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 0
+@0
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//gt
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+D=M-D
+@TRUE15687
+D;JGT
+(FALSE15687)
+@SP
+A=M
+M=0
+@END15687
+0;JMP
+(TRUE15687)
+@SP
+A=M
+M=-1
+(END15687)
+@SP
+M=M+1
+//not
+@SP
+AM=M-1
+M=!M
+@SP
+M=M+1
+//If-Goto Math.pow$WhileEndL13
+@SP
+AM=M-1
+D=M
+@Math.pow$WhileEndL13
+D;JNE
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push argument 0
+@ARG
+D=M
+@0
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// Push return address to stack
+@Math.pow$ret.57
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push LCL
+@LCL
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push ARG
+@ARG
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THIS
+@THIS
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// push THAT
+@THAT
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+// repostitions ARG
+@7
+D=A
+@SP
+D=M-D
+@ARG
+M=D
+// repostitions LCL
+@SP
+D=M
+@LCL
+M=D
+// Goto Math.multiply
+@Math.multiply
+0;JMP
+(Math.pow$ret.57)
+//pop local 0
+@LCL
+D=M
+@0
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//push argument 1
+@ARG
+D=M
+@1
+A=D+A
+D=M
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//push constant 1
+@1
+D=A
+@SP
+A=M
+M=D
+@SP
+M=M+1
+//sub
+@SP
+AM=M-1
+D=M
+@SP
+AM=M-1
+M=M-D
+@SP
+M=M+1
+//pop argument 1
+@ARG
+D=M
+@1
+D=D+A
+@R13
+M=D
+@SP
+AM=M-1
+D=M
+@R13
+A=M
+M=D
+//Goto Math.pow$WhileStartL13
+@Math.pow$WhileStartL13
+0;JMP
+(Math.pow$WhileEndL13)
+//push local 0
+@LCL
+D=M
+@0
+A=D+A
+D=M
 @SP
 A=M
 M=D

@@ -1,12 +1,40 @@
+function Math.init 1
+push constant 16
+call Memory.alloc 1
+pop static 0
+label WhileStartL1
+push local 0
+push constant 16
+lt
+not
+if-goto WhileEndL1
+push static 0
+push local 0
+add
+push constant 2
+push local 0
+call Math.pow 2
+pop temp 0
+pop pointer 1
+push temp 0
+pop that 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WhileStartL1
+label WhileEndL1
+push constant 0
+return
 function Math.bitshiftLeft 1
 push constant 0
 pop local 0
-label WhileStartL143
+label WhileStartL2
 push local 0
 push argument 1
 lt
 not
-if-goto WhileEndL143
+if-goto WhileEndL2
 push argument 0
 push argument 0
 add
@@ -15,8 +43,8 @@ push local 0
 push constant 1
 add
 pop local 0
-goto WhileStartL143
-label WhileEndL143
+goto WhileStartL2
+label WhileEndL2
 push argument 0
 return
 function Math.abs 0
@@ -25,12 +53,12 @@ push constant 0
 lt
 not
 not
-if-goto FalseL144
+if-goto FalseL3
 push argument 0
 return
-goto TrueL144
-label FalseL144
-label TrueL144
+goto TrueL3
+label FalseL3
+label TrueL3
 push argument 0
 not
 push constant 1
@@ -41,12 +69,12 @@ push constant 0
 pop local 0
 push constant 0
 pop local 1
-label WhileStartL145
+label WhileStartL4
 push local 1
 push constant 16
 lt
 not
-if-goto WhileEndL145
+if-goto WhileEndL4
 push argument 1
 push constant 1
 push local 1
@@ -56,22 +84,22 @@ push constant 0
 eq
 not
 not
-if-goto FalseL146
+if-goto FalseL5
 push local 0
 push argument 0
 push local 1
 call Math.bitshiftLeft 2
 add
 pop local 0
-goto TrueL146
-label FalseL146
-label TrueL146
+goto TrueL5
+label FalseL5
+label TrueL5
 push local 1
 push constant 1
 add
 pop local 1
-goto WhileStartL145
-label WhileEndL145
+goto WhileStartL4
+label WhileEndL4
 push local 0
 return
 function Math.divide 1
@@ -79,12 +107,12 @@ push argument 1
 push argument 0
 gt
 not
-if-goto FalseL147
+if-goto FalseL6
 push constant 0
 return
-goto TrueL147
-label FalseL147
-label TrueL147
+goto TrueL6
+label FalseL6
+label TrueL6
 push argument 0
 push argument 1
 push argument 1
@@ -101,20 +129,20 @@ sub
 push argument 1
 lt
 not
-if-goto FalseL148
+if-goto FalseL7
 push local 0
 push local 0
 add
 return
-goto TrueL148
-label FalseL148
+goto TrueL7
+label FalseL7
 push local 0
 push local 0
 add
 push constant 1
 add
 return
-label TrueL148
+label TrueL7
 function Math.mod 0
 push argument 0
 push argument 0
@@ -124,86 +152,108 @@ push argument 1
 call Math.multiply 2
 sub
 return
-function Math.sqrt 3
+function Math.sqrt 4
+push constant 7
+pop local 1
 push constant 0
 pop local 0
-push constant 0
-pop local 1
-label WhileStartL149
+label WhileStartL8
 push local 1
-push constant 16
+push constant 0
 lt
 not
-if-goto WhileEndL149
+not
+if-goto WhileEndL8
 push local 0
-push local 0
-call Math.multiply 2
+push static 0
+push local 1
+add
+pop pointer 1
+push that 0
+add
 pop local 2
 push local 2
+push local 2
+call Math.multiply 2
+pop local 3
+push local 3
 push argument 0
 gt
 not
-if-goto FalseL150
-push constant 16
-pop local 1
-goto TrueL150
-label FalseL150
-push local 0
-push constant 1
-add
+push local 3
+push constant 0
+gt
+and
+not
+if-goto FalseL9
+push local 2
 pop local 0
-label TrueL150
+goto TrueL9
+label FalseL9
+label TrueL9
 push local 1
 push constant 1
-add
-pop local 1
-goto WhileStartL149
-label WhileEndL149
-push local 0
-push constant 1
 sub
+pop local 1
+goto WhileStartL8
+label WhileEndL8
+push local 0
 return
 function Math.min 0
 push argument 0
 push argument 1
 lt
 not
-if-goto FalseL151
+if-goto FalseL10
 push argument 0
 return
-goto TrueL151
-label FalseL151
+goto TrueL10
+label FalseL10
 push argument 1
 return
-label TrueL151
+label TrueL10
 function Math.max 0
 push argument 0
 push argument 1
 gt
 not
-if-goto FalseL152
+if-goto FalseL11
 push argument 0
 return
-goto TrueL152
-label FalseL152
+goto TrueL11
+label FalseL11
 push argument 1
 return
-label TrueL152
+label TrueL11
 function Math.pow 1
+push argument 1
+push constant 0
+eq
+not
+if-goto FalseL12
+push constant 1
+return
+goto TrueL12
+label FalseL12
+label TrueL12
 push constant 1
 pop local 0
-label WhileStartL153
+label WhileStartL13
 push argument 1
 push constant 0
 gt
 not
-if-goto WhileEndL153
+if-goto WhileEndL13
 push local 0
 push argument 0
 call Math.multiply 2
 pop local 0
-goto WhileStartL153
-label WhileEndL153
+push argument 1
+push constant 1
+sub
+pop argument 1
+goto WhileStartL13
+label WhileEndL13
 push local 0
 return
 

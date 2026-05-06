@@ -1,12 +1,12 @@
 function Screen.clearScreen 1
 push constant 16384
 pop local 0
-label WhileStartL34
+label WhileStartL238
 push local 0
 push constant 24576
 lt
 not
-if-goto WhileEndL34
+if-goto WhileEndL238
 push local 0
 push constant 0
 add
@@ -19,8 +19,8 @@ push local 0
 push constant 1
 add
 pop local 0
-goto WhileStartL34
-label WhileEndL34
+goto WhileStartL238
+label WhileEndL238
 push constant 0
 return
 function Screen.setColor 0
@@ -48,12 +48,12 @@ push constant 511
 gt
 or
 not
-if-goto FalseL35
+if-goto FalseL239
 push constant 0
 return
-goto TrueL35
-label FalseL35
-label TrueL35
+goto TrueL239
+label FalseL239
+label TrueL239
 push argument 0
 push argument 1
 call Screen.cordToMemLoc 2
@@ -68,7 +68,7 @@ call Math.bitshiftLeft 2
 pop local 1
 push static 0
 not
-if-goto FalseL36
+if-goto FalseL240
 push local 0
 push constant 0
 add
@@ -83,8 +83,8 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-goto TrueL36
-label FalseL36
+goto TrueL240
+label FalseL240
 push local 1
 not
 pop local 1
@@ -102,10 +102,10 @@ pop temp 0
 pop pointer 1
 push temp 0
 pop that 0
-label TrueL36
+label TrueL240
 push constant 0
 return
-function Screen.drawLine 5
+function Screen.drawLine 6
 push argument 2
 push argument 0
 sub
@@ -120,16 +120,76 @@ push constant 0
 pop local 3
 push constant 0
 pop local 4
-label WhileStartL37
+push local 1
+push constant 0
+eq
+not
+if-goto FalseL241
+label WhileStartL242
 push local 2
 push local 0
-lt
+gt
+not
+not
+if-goto WhileEndL242
+push argument 0
+push local 2
+add
+push argument 1
+call Screen.drawPixel 2
+pop temp 0
+push local 2
+push constant 1
+add
+pop local 2
+goto WhileStartL242
+label WhileEndL242
+push constant 0
+return
+goto TrueL241
+label FalseL241
+label TrueL241
+push local 0
+push constant 0
+eq
+not
+if-goto FalseL243
+label WhileStartL244
 push local 3
 push local 1
-lt
+gt
+not
+not
+if-goto WhileEndL244
+push argument 0
+push argument 1
+push local 3
+add
+call Screen.drawPixel 2
+pop temp 0
+push local 3
+push constant 1
+add
+pop local 3
+goto WhileStartL244
+label WhileEndL244
+push constant 0
+return
+goto TrueL243
+label FalseL243
+label TrueL243
+label WhileStartL245
+push local 2
+push local 0
+gt
+not
+push local 3
+push local 1
+gt
+not
 and
 not
-if-goto WhileEndL37
+if-goto WhileEndL245
 push argument 0
 push local 2
 add
@@ -142,7 +202,7 @@ push local 4
 push constant 0
 lt
 not
-if-goto FalseL38
+if-goto FalseL246
 push local 2
 push constant 1
 add
@@ -151,8 +211,8 @@ push local 4
 push local 1
 add
 pop local 4
-goto TrueL38
-label FalseL38
+goto TrueL246
+label FalseL246
 push local 3
 push constant 1
 add
@@ -161,9 +221,84 @@ push local 4
 push local 0
 sub
 pop local 4
-label TrueL38
-goto WhileStartL37
-label WhileEndL37
+label TrueL246
+goto WhileStartL245
+label WhileEndL245
+push constant 0
+return
+function Screen.drawRectangle 0
+push argument 0
+push argument 1
+push argument 2
+push argument 1
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push argument 3
+push argument 2
+push argument 3
+call Screen.drawLine 4
+pop temp 0
+push argument 0
+push argument 1
+push argument 0
+push argument 3
+call Screen.drawLine 4
+pop temp 0
+push argument 2
+push argument 1
+push argument 2
+push argument 3
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Screen.drawCircle 6
+push argument 2
+neg
+pop local 0
+push argument 2
+pop local 1
+label WhileStartL247
+push local 0
+push local 1
+gt
+not
+not
+if-goto WhileEndL247
+push argument 2
+push argument 2
+call Math.multiply 2
+push local 0
+push local 0
+call Math.multiply 2
+sub
+call Math.sqrt 1
+pop local 2
+push argument 0
+push local 2
+sub
+pop local 3
+push argument 0
+push local 2
+add
+pop local 5
+push argument 1
+push local 0
+add
+pop local 4
+push local 3
+push local 4
+push local 5
+push local 4
+call Screen.drawLine 4
+pop temp 0
+push local 0
+push constant 1
+add
+pop local 0
+goto WhileStartL247
+label WhileEndL247
 push constant 0
 return
 

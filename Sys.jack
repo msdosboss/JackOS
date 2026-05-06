@@ -1,6 +1,10 @@
 class Sys{
     function void init(){
+        do Memory.init();
+        do Math.init();
         do Main.main();
+        //Trap CPU
+        while(true){}
         return;
     }
 }

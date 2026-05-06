@@ -1,8 +1,16 @@
 class Main{
     function void main(){
         do Screen.setColor(true);
+        do Screen.drawRectangle(50, 50, 100, 100);
         do Screen.drawLine(50, 50, 100, 100);
+        do Screen.drawLine(100, 100, 200, 100);
+        do Screen.drawLine(100, 100, 100, 200);
         //do Output.printInt(111);
+        do Screen.drawCircle(11, 11, 10);
+        do Screen.drawCircle(21, 21, 10);
+        do Screen.drawCircle(31, 31, 10);
+        //do Output.printInt(Math.sqrt(50 * 50));
+        //do Output.printInt(Math.sqrt(4));
         return;
     }
 }

@@ -42,12 +42,12 @@ push this 0
 eq
 or
 not
-if-goto FalseL5
+if-goto FalseL116
 push constant 0
 return
-goto TrueL5
-label FalseL5
-label TrueL5
+goto TrueL116
+label FalseL116
+label TrueL116
 push this 2
 push argument 1
 add
@@ -69,12 +69,12 @@ push this 0
 eq
 or
 not
-if-goto FalseL6
+if-goto FalseL117
 push constant 0
 return
-goto TrueL6
-label FalseL6
-label TrueL6
+goto TrueL117
+label FalseL117
+label TrueL117
 push this 2
 push argument 1
 add
@@ -92,12 +92,12 @@ push this 0
 push this 1
 eq
 not
-if-goto FalseL7
+if-goto FalseL118
 push this 2
 return
-goto TrueL7
-label FalseL7
-label TrueL7
+goto TrueL118
+label FalseL118
+label TrueL118
 push this 2
 push this 0
 add
@@ -130,7 +130,7 @@ push constant 0
 pop local 2
 push constant 1
 pop local 1
-label WhileStartL8
+label WhileStartL119
 push this 2
 push local 2
 push constant 1
@@ -157,13 +157,13 @@ push this 0
 lt
 and
 not
-if-goto WhileEndL8
+if-goto WhileEndL119
 push local 2
 push constant 1
 add
 pop local 2
-goto WhileStartL8
-label WhileEndL8
+goto WhileStartL119
+label WhileEndL119
 push this 2
 push local 2
 add
@@ -178,13 +178,13 @@ call Output.printInt 1
 pop temp 0
 call Output.println 0
 pop temp 0
-label WhileStartL9
+label WhileStartL120
 push local 2
 push constant 1
 neg
 gt
 not
-if-goto WhileEndL9
+if-goto WhileEndL120
 push local 0
 push local 1
 push this 2
@@ -205,8 +205,8 @@ push local 2
 push constant 1
 sub
 pop local 2
-goto WhileStartL9
-label WhileEndL9
+goto WhileStartL120
+label WhileEndL120
 push local 0
 return
 function String.setInt 2
@@ -219,7 +219,7 @@ call Stack.new 1
 pop local 1
 push constant 0
 pop this 0
-label WhileStartL10
+label WhileStartL121
 push argument 1
 push constant 10
 call Math.divide 2
@@ -227,7 +227,7 @@ push constant 0
 eq
 not
 not
-if-goto WhileEndL10
+if-goto WhileEndL121
 push local 1
 push argument 1
 push constant 10
@@ -242,20 +242,20 @@ push local 0
 push constant 1
 add
 pop local 0
-goto WhileStartL10
-label WhileEndL10
+goto WhileStartL121
+label WhileEndL121
 push local 1
 push argument 1
 push constant 10
 call Math.mod 2
 call Stack.push 2
 pop temp 0
-label WhileStartL11
+label WhileStartL122
 push local 0
 push constant 0
 gt
 not
-if-goto WhileEndL11
+if-goto WhileEndL122
 push pointer 0
 push local 1
 call Stack.pop 1
@@ -267,8 +267,8 @@ push local 0
 push constant 1
 sub
 pop local 0
-goto WhileStartL11
-label WhileEndL11
+goto WhileStartL122
+label WhileEndL122
 push constant 0
 return
 function String.backSpace 0
